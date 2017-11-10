@@ -1,1 +1,2 @@
-# BTAJavaDemo
+# BalticTalents Akademija
+# Java Demo
