@@ -6,6 +6,8 @@ public class Zmogus {
 
     private String pavarde;
 
+    private int age;
+
     public Zmogus(String vardas) {
         this.vardas = vardas;
     }

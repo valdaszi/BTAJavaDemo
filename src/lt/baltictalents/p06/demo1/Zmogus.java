@@ -19,10 +19,14 @@ class Zmogus {
         return vardas + (pavarde == null ? "" : ' ' + pavarde);
     }
 
+    String pilnasVardas(String titulas) {
+        return (titulas == null ? "" : titulas + ' ') + pilnasVardas();
+    }
+
     public static void main(String[] args) {
 
         Zmogus zmogus1 = new Zmogus("Karolis XV");
-        System.out.println(zmogus1.pilnasVardas());
+        System.out.println(zmogus1.pilnasVardas("Jo didenybe"));
 
         Zmogus zmogus2 = new Zmogus("Ieva", "Ievaitė");
         System.out.println(zmogus2.pilnasVardas());

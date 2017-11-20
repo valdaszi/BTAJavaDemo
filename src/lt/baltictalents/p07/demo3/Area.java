@@ -2,6 +2,9 @@ package lt.baltictalents.p07.demo3;
 
 public class Area {
 
+    private Area() {
+    }
+
     public static double circle(double r) {
         return Math.PI * r * r;
     }
