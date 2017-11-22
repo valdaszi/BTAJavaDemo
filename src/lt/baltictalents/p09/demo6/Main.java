@@ -11,6 +11,5 @@ public class Main {
         Salary boss = new Boss();
         boss.setSalary(1);
         System.out.println("Boss Salary = " + boss.getSalary());
-
     }
 }
