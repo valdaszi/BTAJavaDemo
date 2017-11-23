@@ -11,7 +11,7 @@ public class Main {
 
         System.out.println(Integer.compare(1, 2));
         System.out.println(Integer.compare(1, 1));
-        System.out.println(Integer.compare(2, 1));
+        System.out.println(Integer.compare(10, 1));
 
         System.out.println("Max radix = " + Character.MAX_RADIX);
 
@@ -26,6 +26,8 @@ public class Main {
         System.out.println("123 = " + Integer.parseInt("123"));
         System.out.println("3.14 = " + Double.parseDouble("3.14"));
         System.out.println("2e4 = " + Double.parseDouble("2e4"));
+
+        System.out.println("arbuzas = " + Long.parseLong("arbuzas", 36));
 
     }
 

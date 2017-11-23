@@ -6,9 +6,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Integer a = new Integer(1);
+        Long a = new Long(1);
 
-        for (int i = 0; i < 31; i++) a = new Integer(a.intValue() * 2);
+        for (int i = 0; i < 64; i++) a = new Long(a.longValue() * 2);
 
         System.out.println(a);
 
@@ -16,7 +16,7 @@ public class Main {
 
         BigInteger b = BigInteger.valueOf(1);
 
-        for (int i = 0; i < 31; i++) b = b.multiply(BigInteger.valueOf(2));
+        for (int i = 0; i < 64; i++) b = b.multiply(BigInteger.valueOf(2));
 
         System.out.println(b);
 

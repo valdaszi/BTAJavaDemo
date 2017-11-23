@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Double pi = 3.141528;
+        Double pi = 3.141528; // new Double(3.141528)
 
         Double r = 6371.1;
 

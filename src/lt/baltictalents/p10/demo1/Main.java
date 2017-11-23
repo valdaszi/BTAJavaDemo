@@ -11,6 +11,6 @@ public class Main {
         System.out.println(a / b.doubleValue());
 
         Double c = null;
-        System.out.println(a / c.doubleValue());
+        System.out.println(a * c);
     }
 }
