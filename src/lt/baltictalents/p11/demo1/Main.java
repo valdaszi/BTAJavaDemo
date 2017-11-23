@@ -34,5 +34,26 @@ public class Main {
         }
         System.out.println();
 
+
+        List<Integer> b = new ArrayList<>();
+        b.add(25);
+        b.add(26);
+
+        list.addAll(b);
+
+        System.out.print("Sąrašas:");
+        for (Integer i : list) {
+            System.out.print(" " + i);
+        }
+        System.out.println();
+
+        b.clear();
+        b.add(10);
+        b.add(20);
+        System.out.println("Ar yra 10,20? = " + list.containsAll(b));
+
+        b.add(21);
+        System.out.println("Ar yra 10,20,21? = " + list.containsAll(b));
+
     }
 }

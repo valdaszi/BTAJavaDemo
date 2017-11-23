@@ -22,7 +22,9 @@ public class Main {
         map.put("dvidešimt", 20);
         map.put("penkiasdešimt", 50);
         map.put("dvidešimt", 20);
-        map.put("dešimt", 10);
+        map.put("šeši", 6);
+        map.put("septyniasdešimt", 70);
+
 
         System.out.print("Žodyno reikšmės:");
         for (Integer i : map.values()) {
@@ -38,7 +40,7 @@ public class Main {
         System.out.println("Ar yra reikšmė 20? = " + map.containsValue(20));
         System.out.println("Ar yra raktas 'dešimt'? = " + map.containsKey("dešimt"));
 
-        System.out.println("Išmetam is objektą su raktu 'dešimt'");
+        System.out.println("Išmetam objektą su raktu 'dešimt'");
         map.remove("dešimt");
 
         System.out.print("Žodyno reikšmės:");

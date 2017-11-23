@@ -26,7 +26,7 @@ public class Main {
         set.add(20);
         set.add(10);
 
-        System.out.print("Aibė:");
+        System.out.print("Aibės dydis " + set.size() + ": " );
         for (Integer i : set) {
             System.out.print(" " + i);
         }
@@ -37,7 +37,7 @@ public class Main {
         System.out.println("Išmetam is sąrašo 20");
         set.remove(20);
 
-        System.out.print("Aibė:");
+        System.out.print("Aibės dydis " + set.size() + ": " );
         for (Integer i : set) {
             System.out.print(" " + i);
         }
