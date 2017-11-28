@@ -12,7 +12,7 @@ public class Main {
         employee.position = new Employee.Position();
         employee.position.salary = BigDecimal.valueOf(50);
 
-        System.out.println(employee.position.print());
+        System.out.println(employee.name + " " + employee.position.print());
     }
 
 }

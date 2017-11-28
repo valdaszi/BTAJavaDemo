@@ -12,5 +12,7 @@ public class Main {
         employee.position.salary = BigDecimal.valueOf(5000, 2);
 
         System.out.println(employee.position.print());
+
     }
+
 }
