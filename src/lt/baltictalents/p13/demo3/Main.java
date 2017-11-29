@@ -7,9 +7,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //Collection<Employee> list = new ArrayList<>();
+        List<Employee> list = new ArrayList<>();
         //Collection<Employee> list = new TreeSet<>();
-        Collection<Employee> list = new HashSet<>();
+        //Collection<Employee> list = new HashSet<>();
 
         list.add(new Employee(1, "Ona", "administracija", new BigDecimal("11.00")));
         list.add(new Employee(2, "Zenonas", "pardavimai", new BigDecimal("9.00")));
@@ -62,11 +62,19 @@ public class Main {
 //            System.out.println(employee);
 //        }
 
-//        Collections.sort(list);
-//        System.out.println("Sulygiuota:");
-//        for (Employee employee : list) {
-//            System.out.println(employee);
-//        }
+        Collections.sort(list);
+        list.sort(new Comparator<Employee>() {
+            @Override
+            public int compare(Employee o1, Employee o2) {
+                return 0;
+            }
+        });
+
+        System.out.println("Sulygiuota:");
+        for (Employee employee : list) {
+            System.out.println(employee);
+        }
+
 
     }
 }

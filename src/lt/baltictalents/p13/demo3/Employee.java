@@ -2,7 +2,7 @@ package lt.baltictalents.p13.demo3;
 
 import java.math.BigDecimal;
 
-public class Employee implements Comparable {
+public class Employee implements Comparable<Employee> {
 
     private long id;
 
@@ -62,7 +62,7 @@ public class Employee implements Comparable {
     }
 
     @Override
-    public int compareTo(Object o) {
+    public int compareTo(Employee o) {
 
         Employee employee = (Employee) o;
         if (getId() < employee.getId()) return -1;
@@ -76,6 +76,7 @@ public class Employee implements Comparable {
 
         return getSalary().compareTo(employee.getSalary());
     }
+
 
     @Override
     public boolean equals(Object o) {
