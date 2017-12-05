@@ -1,5 +1,7 @@
 package lt.baltictalents.p16.demo1;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 import java.util.Random;
 import java.util.function.Function;
@@ -18,14 +20,24 @@ public class Main {
         System.out.println("positive(-2) " + positive.test(-2));
 
         Supplier<Integer> generator = new Random()::nextInt;
-        System.out.println("random #1 -> " + generator.get());
-        System.out.println("random #2 -> " + generator.get());
-        System.out.println("random #3 -> " + generator.get());
 
+        List<Optional<Integer>> list = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
-            Optional<Integer> opt = generator.get() < 0 ? Optional.empty() : Optional.of(100);
-            System.out.println(opt);
+            int r = generator.get();
+            System.out.println("random #" + i + " -> " + r);
+
+            Optional<Integer> opt = r < 0 ? Optional.empty() : Optional.of(r);
+            list.add(opt);
         }
+        long sum = 0;
+        for (Optional<Integer> opt : list) {
+            sum += opt.orElse(0);
+        }
+        System.out.println("sum = " + sum);
+
+        Optional<Integer> op = Optional.ofNullable(0);
+        int a = op.orElse(1);
+        System.out.println("a = " + a);
 
     }
 }
