@@ -1,7 +1,5 @@
 package lt.baltictalents.p21.demo7;
 
-import java.io.*;
-
 public class Demo7 {
 
     public static void main(String... args) {
@@ -19,6 +17,7 @@ public class Demo7 {
         // replaceAll()
 
         System.out.println("ananasas: an -> Nan: " + "ananasas".replaceAll("an", "Nan"));
+        System.out.println("13/12/2018 -> " + "13/12/2018".replaceAll("(\\d+)/(\\d+)/(\\d+)", "$3-$2-$1"));
 
         // split()
 
