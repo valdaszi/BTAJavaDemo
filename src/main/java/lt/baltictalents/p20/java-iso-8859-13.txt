@@ -1,0 +1,74 @@
+Java (kalba)
+
+Javos logotipas
+Java ? bendrosios paskirties, objektiðkai orientuota programavimo kalba, kurià 1991 m. sukurë Dþeimsas Goslingas ir kiti ¥Sun Microsystems´ inþinieriai, o 2010 m. jà ásigijo Oracle korporacija.
+
+Apie Javà oficialiai paskelbta 1995 metø geguþës 23 d., o iðleista tø paèiø metø lapkritá. Java (pradþioje vadinta Oak) kalbos pirminis tikslas buvo pakeisti C++ kalbà.
+
+Javos aplikacijos yra kompiliuojamos á baitkodà, kuris gali bûti paleidþiamas bet kokioje Javos virtualiojoje maðinoje (JVM), nepriklausomai nuo kompiuterio architektûros.
+
+2015 m. Java yra viena ið populiariausiø naudojamø programavimo kalbø,[1][2][3][4] ypaè kliento-serverio ¥web aplikacijose´. Ja taip pat raðomos programos Android iðmaniesiems telefonams.
+
+Turinys  [slëpti]
+1	Paskirtis
+2	Struktûra
+3	Pavyzdys
+4	Kalbos ypatybës
+5	Google
+6	Ðaltiniai
+7	Nuorodos
+Paskirtis[redaguoti | redaguoti vikitekstà]
+Kuriant Java, pagrindiniai tikslai buvo ðie:
+
+Kalba turi bûti objektiðkai orientuota.
+Kalba turi bûti nepriklausoma nuo naudojamos platformos (beveik nepriklausoma).
+Savyje kalba turi turëti priemones ir bibliotekas komunikacijai tinklu.
+Kalba turi bûti suprojektuota taip, kad kodas ið nutolusio ðaltinio bûtø vykdomas saugiai.
+Struktûra[redaguoti | redaguoti vikitekstà]
+Java platforma yra sudaryta ið trijø pagrindiniø daliø:
+
+J2SE ? Java 2 Platform, Standard Edition. Tai Javos ðirdis, ðioje platformoje yra pateikiamos visos bazinës bibliotekos ir árankiai, kurie naudojami komandinës eilutës ir grafinæ sàsajà turinèioms programoms (pvz., naudojanèioms Swing karkasà) kurti. Net ir ði paprasèiausia dalis jau visiðkai palaiko CORBA.
+J2EE ? Java 2 Platform, Enterprise Edition. Ði dalis skirta kurti informacines verslo sistemas. Tiesiog J2SE yra papildoma ávairiomis technologijomis, suteikianèiomis galimybæ kurti Web programas (Java Servlet, JavaServer Pages, JavaServer Faces ir t. t.), iðskirstytas sistemas, apibrëþia daugkartinio panaudojimo komponentus (Enterprise JavaBeans), pateikia ðûsná standartø ir t. t.
+J2ME ? Java 2 Platform, Micro Edition. Tai platforma, kuri pateikia árankiø rinkiná kurti programas tokiems mobiliems árenginiams, kaip mobiliesiems telefonams, delniniams kompiuteriams ir t. t.
+Pavyzdys[redaguoti | redaguoti vikitekstà]
+Java kalba paraðytos programos, á ekranà iðvedanèios tekstà ¥Sveikas, pasauli!´, pavyzdys:
+
+public class SveikasPasauli {
+
+	public static void main(String[] args) {
+		System.out.println("Sveikas, pasauli!");
+	}
+
+}
+Kalbos ypatybës[redaguoti | redaguoti vikitekstà]
+Java programavimo sistemoje programuotojo paraðytas kodas kompiliuojamas ne á procesoriui specifinæ, o á tarpinæ formà. Ði tarpinë forma nepriklauso nuo procesoriaus tipo ar operacinës sistemos, todël iðkart tinka vykdyti ávairiose aplinkose. Pirmosiose java versijose tarpinis kodas buvo interpretuojamas, todël Java pelnë lëtai dirbanèios platformos reputacijà. Dabartinës sistemos tarpiná kodà paprastai prieð vykdydamos kompiliuoja (just in time compiling), todël vykdymo greitis panaðus ar tik neþymiai maþesnis. Java turi ¥natyvià sàsàjà´, kurios pagalba nesunku jà jungti ir su esanèiomis C, C++ ar FORTRAN bibliotekomis. Daþniausiai to prireikia jei bûtina naudoti ðiomis kalbomis paraðytas matematines ar kitokias bibliotekas.
+
+Masyvo rëþiø tikrinimas java programuotojams padeda iðvengti sunkiai aptinkamø programavimo klaidø, sukelianèiø atidëtà katastrofà.
+
+Svarbi Java sistemos dalis yra ðiukðliø surinktuvas. C ar C++ programuotojas turi raðyti kodà, kuris atëjus laikui ¥naikina´ nebereikalingas duomenø struktûras, iðlaisvindamas jø uþimamà atmintá. Klaidos neretai ¥pakabindavo´ programà, o senesniais laikais paprastai ir visà operacinæ sistemà. Java ðiukðliø surinkëjas pats nustato, jog struktûra nebenaudojama ir jos uþimama atmintis gali bûti panaudota kam kitam.
+
+Ávairios Java programos dalys nesunkiai gali bûti vykdomos lygiagreèiai (multithreading).
+
+Java taip pat turi gerai iðvystytà refleksijos sistemà.
+
+Pradedant naujesne 1.5 versija, java kalba taip pat palaiko ¥bendrybes´ (angl. generics), kurios primena aiðkesná, paprastesná praeityje kai kuriose kalbose buvusiø makrokomandø variantà. Nuo 1.6 versijos java palaiko skriptus ? galimybæ vykdyti simboliø eilutës kintamajame esantá kitos programos tekstà, jam keièiantis duomenimis su gaubianèiàja programa.
+
+Ðiuo metu esama tiek komerciniø, tiek ir atviro kodo (GNU Classpath, Apache Harmony) Java programø vykdymo sistemø. Java sukûrusi Sun microsystems 2006 m lapkrièio mënesá paskelbë, jog per keletà metø palaipsniui pereina prie atviro kodo modelio, pateikiant visas java programai vykdyti reikalingas dalis su GPL licencija, papildyta sujungimo iðimtimi.
+
+Google[redaguoti | redaguoti vikitekstà]
+Google ir Android, Inc. pasirinko Java kalbà kuriant Android operacinæ sistemà. Nors ir Android, veikianti Linux kernel pagrindu, paraðyta C kalba, Android SDK naudoja Java kaip Android aplikacijø pamatà. Taèiau tik sintaksei, o ne klasiø bibliotekoms.
+
+Ðaltiniai[redaguoti | redaguoti vikitekstà]
+Ðokti aukðtyn ? McMillan, Robert (2013-08-01). ¥Is Java Losing Its Mojo?´. wired.com. ¥Java is on the wane, at least according to one outfit that keeps on eye on the ever-changing world of computer programming languages. For more than a decade, it has dominated the Tiobe Programming Community Index ? a snapshot of software developer enthusiasm that looks at things like internet search results to measure how much buzz different languages have. But lately, Java has been slipping.´
+Ðokti aukðtyn ? RedMonk Index on redmonk.com (Stephen OÿGrady, January 2015)
+Ðokti aukðtyn ? ¥Programming Language Popularity´. langpop.com. 2013-10-25. Nuoroda tikrinta 2015-04-02. ¥Normalized Comparison: 1st C, 2nd Java, 3rd PHP´
+Ðokti aukðtyn ? ¥TIOBE Programming Community Index´. 2015. Nuoroda tikrinta 2015-04-03.
+Nuorodos[redaguoti | redaguoti vikitekstà]
+Susijæ straipsniai:
+
+Programavimo kalbos
+Kiti ðaltiniai:
+
+J2SE v. 1.4.2 dokumentacija
+Java platformos puslapis, palaikomas Sun korporacijos
+Java platformos puslapis, palaikomas Free Software Foundation (atviras kodas)

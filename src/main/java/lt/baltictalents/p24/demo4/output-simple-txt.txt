@@ -1,0 +1,10 @@
+Dec 18, 2017 4:11:08 PM lt.baltictalents.p24.demo4.Demo4 main
+WARNING: Įspėjimas
+Dec 18, 2017 4:11:08 PM lt.baltictalents.p24.demo4.Demo4 main
+SEVERE: Klaida
+Dec 18, 2017 4:11:08 PM lt.baltictalents.p24.demo4.Demo4 main
+INFO: Pranešimas #1
+Dec 18, 2017 4:11:08 PM lt.baltictalents.p24.demo4.Demo4 main
+INFO: Pranešimas #2
+Dec 18, 2017 4:11:08 PM lt.baltictalents.p24.demo4.Demo4 main
+INFO: Pranešimas #3

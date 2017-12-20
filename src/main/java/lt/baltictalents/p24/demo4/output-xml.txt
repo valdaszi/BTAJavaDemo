@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2017-12-18T16:11:08</date>
+  <millis>1513606268093</millis>
+  <sequence>0</sequence>
+  <logger>lt.baltictalents.p24.demo4.Demo4</logger>
+  <level>WARNING</level>
+  <class>lt.baltictalents.p24.demo4.Demo4</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Įspėjimas</message>
+</record>
+<record>
+  <date>2017-12-18T16:11:08</date>
+  <millis>1513606268135</millis>
+  <sequence>1</sequence>
+  <logger>lt.baltictalents.p24.demo4.Demo4</logger>
+  <level>SEVERE</level>
+  <class>lt.baltictalents.p24.demo4.Demo4</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Klaida</message>
+</record>
+<record>
+  <date>2017-12-18T16:11:08</date>
+  <millis>1513606268138</millis>
+  <sequence>2</sequence>
+  <logger>lt.baltictalents.p24.demo4.Demo4</logger>
+  <level>INFO</level>
+  <class>lt.baltictalents.p24.demo4.Demo4</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Pranešimas #1</message>
+</record>
+<record>
+  <date>2017-12-18T16:11:08</date>
+  <millis>1513606268140</millis>
+  <sequence>3</sequence>
+  <logger>lt.baltictalents.p24.demo4.Demo4</logger>
+  <level>INFO</level>
+  <class>lt.baltictalents.p24.demo4.Demo4</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Pranešimas #2</message>
+</record>
+<record>
+  <date>2017-12-18T16:11:08</date>
+  <millis>1513606268142</millis>
+  <sequence>4</sequence>
+  <logger>lt.baltictalents.p24.demo4.Demo4</logger>
+  <level>INFO</level>
+  <class>lt.baltictalents.p24.demo4.Demo4</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Pranešimas #3</message>
+</record>
+</log>
