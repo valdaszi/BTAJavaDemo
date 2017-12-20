@@ -52,3 +52,7 @@ crashlytics-build.properties
 fabric.properties
 
 **/*.zip
+
+# Mine
+doc/
+
