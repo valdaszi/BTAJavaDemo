@@ -1,7 +1,6 @@
 package lt.baltictalents.p27.demo4;
 
 import javax.swing.*;
-import javax.swing.text.EditorKit;
 import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
