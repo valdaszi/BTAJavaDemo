@@ -1,29 +1,45 @@
 package lt.baltictalents.uzdaviniai;
 
+import javafx.application.Application;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.paint.Color;
+import javafx.stage.Stage;
+
 public class Main {
 
-    public static void main(String... args) {
+    synchronized static void method(long t, int i) throws InterruptedException {
+        Thread.sleep(t);
+        System.out.print(i);
+    }
 
-        int s = 0;
-        for (int i = 0; i < 1000000; i++) {
-            boolean r = random();
-            if (r) {
-                s++;
-            } else {
-                s--;
+    public static void main(String[] args) throws InterruptedException {
+
+        Object o = new Object();
+
+        new Thread(() -> {
+            synchronized(o) {
+                try {
+                    Thread.sleep(300);
+                } catch (InterruptedException e) {}
             }
+            System.out.print(1);
+        }).start();
 
-        }
-        System.out.println(s);
+        Thread.sleep(100);
+
+        new Thread(() -> {
+            synchronized(o) {
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {}
+            }
+            System.out.print(2);
+        }).start();
+
+        System.out.print(3);
     }
 
-    static boolean random() {
-        double r = Math.random();
-        if (r < 0.5) {
-            return true;
-        } else {
-            return false;
-        }
-    }
+
 
 }

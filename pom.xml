@@ -52,7 +52,7 @@
                 <!--<configuration>-->
                     <!--<archive>-->
                         <!--<manifest>-->
-                            <!--&lt;!&ndash;<mainClass>lt.baltictalents.p25.demo1.Demo1</mainClass>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<mainClass>lt.baltictalents.p25.demo1_Adapter.Demo1</mainClass>&ndash;&gt;-->
                             <!--<mainClass>lt.baltictalents.p26.demo2.Demo2</mainClass>-->
                         <!--</manifest>-->
                     <!--</archive>-->

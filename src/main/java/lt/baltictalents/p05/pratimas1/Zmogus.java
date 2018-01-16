@@ -25,5 +25,15 @@ class Zmogus {
         for (Zmogus z : zmones) {
             System.out.println(z.vardas + (z.pavarde == null ? "" : ' ' + z.pavarde));
         }
+
+        Zmogus zmones2[] = {
+                new Zmogus("Henrikas VII"),
+                new Zmogus("Henrikas VIII"),
+                new Zmogus("Henrikas IX")
+        };
+
+        for (Zmogus z : zmones2) {
+            System.out.println(z.vardas + (z.pavarde == null ? "" : ' ' + z.pavarde));
+        }
     }
 }

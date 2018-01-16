@@ -6,9 +6,9 @@ class Zmogus {
 
     String pavarde;
 
-    Zmogus(String v, String p) {
-        vardas = v;
-        pavarde = p;
+    Zmogus(String vardas, String pavarde) {
+        this.vardas = vardas;
+        this.pavarde = pavarde;
     }
 
     String pilnasVardas() {
