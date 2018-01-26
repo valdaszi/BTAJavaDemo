@@ -1,6 +1,6 @@
 package lt.baltictalents.p08.demo1;
 
-public class Figure {
+public abstract class Figure {
 
     private String color;
 
@@ -8,7 +8,7 @@ public class Figure {
         this.color = color;
     }
 
-    public double getArea() { return 0; };
+    public abstract double getArea();
 
     public String getColor() {
         return color;

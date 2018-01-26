@@ -1,7 +1,6 @@
 package lt.baltictalents.p27.demo6;
 
 import javax.swing.*;
-import java.awt.*;
 
 public class Demo6 {
 

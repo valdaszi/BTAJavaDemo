@@ -14,7 +14,7 @@ public class Main {
 
         Zmogus.kiekis++;
 
-        System.out.println("Viso žmonių " + zmogus2.kiekis);
+        System.out.println("Viso žmonių " + Zmogus.kiekis);
 
     }
 }

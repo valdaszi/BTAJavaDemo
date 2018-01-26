@@ -1,7 +1,5 @@
 package lt.baltictalents.p17.demo2;
 
-import sun.util.BuddhistCalendar;
-
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
@@ -10,9 +8,6 @@ public class Demo2 {
     public static void main(String[] args) {
 
         Calendar calendar = Calendar.getInstance();
-        System.out.println(calendar.get(Calendar.YEAR));
-
-        calendar = new BuddhistCalendar();
         System.out.println(calendar.get(Calendar.YEAR));
 
         // menesiai numeruojami nuo 0 - sausis .. 11 - gruodis, 12 - sekančių metų sausis ...

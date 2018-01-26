@@ -26,6 +26,4 @@ public class Circle extends Figure implements Area {
     public double getPerimeter() {
         return 2 * Math.PI * radius;
     }
-
-
 }

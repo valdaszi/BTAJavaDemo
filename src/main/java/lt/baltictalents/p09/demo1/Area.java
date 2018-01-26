@@ -4,4 +4,6 @@ public interface Area {
 
     void setSizeFromArea(double area);
 
+    double getArea();
+
 }

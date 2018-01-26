@@ -17,6 +17,7 @@ public class Zmogus {
     }
 
     public String pilnasVardas() {
+
         return vardas + (pavarde == null ? "" : ' ' + pavarde);
     }
 
