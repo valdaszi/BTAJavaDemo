@@ -20,19 +20,19 @@ public class Main {
         Set<String> s1 = employees.stream()
                 .map(Employee::getDepartment)
                 .collect(Collectors.toSet());
-        System.out.println(s1);
+        System.out.println("Set<String>: " + s1);
 
         // Išrinkti visus skyrius ir jų darbuotojus
         Map<String, List<Employee>> s2 = employees.stream()
                 .collect(Collectors.groupingBy(Employee::getDepartment));
-        System.out.println(s2);
+        System.out.println("Map<String, List<Employee>>: " + s2);
 
         // Išrinkti visus skyrius ir jų darbuotojų suminius atlyginimus
         Map<String, Double> s3 = employees.stream()
                 .collect(Collectors.groupingBy(
                         Employee::getDepartment,
                         Collectors.reducing(0.0, Employee::getSalary, Double::sum)));
-        System.out.println(s3);
+        System.out.println("Map<String, Double>: " + s3);
 
         // Išrinkti visus skyrius ir jų darbuotojų vardus
         Map<String, Set<String>> s4 = employees.stream()
@@ -40,7 +40,7 @@ public class Main {
                     Employee::getDepartment,
                     Collectors.mapping(Employee::getName, Collectors.toSet())
             ));
-        System.out.println(s4);
+        System.out.println("Map<String, Set<String>>: " + s4);
 
     }
 

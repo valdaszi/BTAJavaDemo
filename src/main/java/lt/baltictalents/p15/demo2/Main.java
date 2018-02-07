@@ -12,7 +12,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-//        Avg<Integer> calc1 = new Avg<Integer>() {
+//        Avg<Integer> calc = new Avg<Integer>() {
 //            @Override
 //            public Integer avg(Integer n1, Integer n2) {
 //                return (n1 + n2) / 2;

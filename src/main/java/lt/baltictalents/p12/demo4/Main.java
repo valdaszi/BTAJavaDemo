@@ -4,25 +4,25 @@ public class Main {
 
     public static void main(String[] args) {
 
-//        A a = new A() {
-//
-//            private int i = 1;
-//
-//            @Override
-//            public long pow2() {
-//                i *= 2;
-//                return i;
-//            }
-//        };
-//
-//        System.out.println(a.pow2());
-//        System.out.println(a.pow2());
-//        System.out.println(a.pow2());
+        A a = new A() {
+
+            private int i = 1;
+
+            @Override
+            public long pow2() {
+                i *= 2;
+                return i;
+            }
+        };
+
+        System.out.println(a.pow2());
+        System.out.println(a.pow2());
+        System.out.println(a.pow2());
 
 
         B b = new B(new Next() {
             @Override
-            public void inc() {
+            void inc() {
                 this.i++;
             }
         });

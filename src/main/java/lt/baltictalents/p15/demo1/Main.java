@@ -18,7 +18,7 @@ public class Main {
         list.add(new Employee("Ada", 1500.0, "administration"));
 
         // atspausdinti tuos kurie uzdirba daugiau nei 1000
-//        filter(list, 1000.0);
+        filter(list, 900.0);
 
         filterByFilter(list, new Check<Employee>() {
 
