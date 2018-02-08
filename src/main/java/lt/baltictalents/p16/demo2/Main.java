@@ -17,7 +17,18 @@ public class Main {
         list.add(new Employee("Ada", 1500.0, "administration"));
 
         System.out.println("stream:");
-        list.stream().filter(e -> e.getSalary() > 1000.0).forEach(System.out::println);
+//        list.stream().filter(new Predicate<Employee>() {
+//                                 @Override
+//                                 public boolean test(Employee employee) {
+//                                     return employee.getSalary() > 1000.0;
+//                                 }
+//        }).forEach(new Consumer<Employee>() {
+//            @Override
+//            public void accept(Employee employee) {
+//                System.out.println(employee);
+//            }
+//        });
+        list.stream().filter(employee -> employee.getSalary() > 1000.0).forEach(System.out::println);
 
         System.out.println("parallelStream:");
         list.parallelStream().filter(e -> e.getSalary() < 1400.0).forEach(System.out::println);
