@@ -12,10 +12,11 @@ public class Demo2 {
         long startTime = System.nanoTime();
 
         try (
-//                Reader in = new FileReader("src/main/java/lt/baltictalents/p20/java-iso-8859-13.txt");
-                Reader in = new InputStreamReader(
-                        new FileInputStream("src/main/java/lt/baltictalents/p20/java-iso-8859-13.txt"),
-                        "ISO-8859-13");
+                // paprastai reikia nurodyti kaip užkoduotas failas!!!
+                Reader in = new FileReader("src/main/java/lt/baltictalents/p20/java-iso-8859-13.txt");
+//                Reader in = new InputStreamReader(
+//                        new FileInputStream("src/main/java/lt/baltictalents/p20/java-iso-8859-13.txt"),
+//                        "ISO-8859-13");
 
                 Writer out = new FileWriter("src/main/java/lt/baltictalents/p20/output.txt");
         ) {

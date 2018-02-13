@@ -18,7 +18,14 @@ public class Demo6 {
         list.add(new A("obuolys", b, new B("apelsinas", 200)));
         list.add(new A("slyva", new B("citrina", 300), b));
 
-        // writing
+
+        write(list);
+
+        read();
+
+    }
+
+    static void write( List<A> list) {
         try (
                 ObjectOutput ou = new ObjectOutputStream(
                         new BufferedOutputStream(
@@ -32,8 +39,9 @@ public class Demo6 {
             e.printStackTrace();
         }
 
+    }
 
-        // reading
+    static void read() {
         try (
                 ObjectInput in = new ObjectInputStream(
                         new BufferedInputStream(

@@ -1,12 +1,8 @@
 package lt.baltictalents.p20.demo6;
 
-import java.io.Serializable;
-
-public class A implements Serializable {
+public class A {
 
     private String a;
-
-    private String a2;
 
     private B b1;
 
