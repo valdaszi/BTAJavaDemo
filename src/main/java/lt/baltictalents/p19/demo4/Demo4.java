@@ -8,7 +8,23 @@ public class Demo4 {
             a.work();
             a.work();
             a.work();
+        } catch (Exception e) {
+            System.out.println("Pagavau :)");
         }
 
+        System.out.println("Finish");
+
+    }
+}
+
+class A implements AutoCloseable {
+
+    @Override
+    public void close() {
+        System.out.println("A closed");
+    }
+
+    public void work() {
+        System.out.println("A working...");
     }
 }

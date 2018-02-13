@@ -15,29 +15,29 @@ public class Demo7 {
         }
 
     }
+}
 
-    static class A {
+class A {
 
-        void work(int i) throws KlaidaA {
-            if (i % 2 == 0) {
-                throw new KlaidaA("Lyginis " + i);
-            }
-        }
-
-        void start(int i) throws KlaidaA {
-            work(i);
+    void work(int i) throws KlaidaA {
+        if (i % 2 == 0) {
+            throw new KlaidaA("Lyginis " + i);
         }
     }
 
-    static class KlaidaA extends Exception {
+    void start(int i) throws KlaidaA {
+        work(i);
+    }
+}
 
-        public KlaidaA(String message) {
-            super(message);
-        }
+class KlaidaA extends Exception {
 
-        @Override
-        public String toString() {
-            return "KlaidaA " + getMessage();
-        }
+    KlaidaA(String message) {
+        super(message);
+    }
+
+    @Override
+    public String toString() {
+        return "KlaidaA " + getMessage();
     }
 }

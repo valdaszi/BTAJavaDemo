@@ -23,7 +23,7 @@ public class Demo6 {
 
         System.out.println(Locale.getDefault().getDisplayName());
 
-        //ResourceBundle messages = ResourceBundle.getBundle("lt.baltictalents.p18.demo7.MessagesBundle");
+//        ResourceBundle messages = ResourceBundle.getBundle("lt.baltictalents.p18.demo7.MessagesBundle");
         ResourceBundle messages = ResourceBundle.getBundle(
                 Demo6.class.getPackage().getName() + ".MessagesBundle");
 

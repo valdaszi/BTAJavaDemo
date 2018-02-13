@@ -24,7 +24,7 @@ public class Demo3 {
         numberFormat.setMaximumFractionDigits(3);
         System.out.println(numberFormat.format(n));
 
-        Number x = numberFormat.parse("EUR 123456,789");
+        Number x = numberFormat.parse("123456,789 €");
         System.out.println(x.getClass().getName() + ": " + x);
 
         // Integer
