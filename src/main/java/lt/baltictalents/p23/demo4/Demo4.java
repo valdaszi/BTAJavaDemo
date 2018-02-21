@@ -2,13 +2,11 @@ package lt.baltictalents.p23.demo4;
 
 public class Demo4 {
 
-    public static void main(String... args) throws InterruptedException {
+    public static void main(String... args) {
 
         B b = new B();
-        b.start();
 
-
-        new Thread(() -> {
+        Thread a = new Thread(() -> {
 
             try {
                 b.join(600);
@@ -25,10 +23,17 @@ public class Demo4 {
                 }
             }
 
-        }).start();
+        });
+
+        b.setA(a);
+        b.start();
+
+        a.start();
     }
 
     static class B extends Thread {
+
+        Thread a;
 
         @Override
         public void run() {
@@ -38,9 +43,18 @@ public class Demo4 {
                     Thread.sleep(200);
                 } catch (InterruptedException e) {
                     System.out.println("B: Nutraukta cikle");
+                    if (a != null) a.interrupt();
                     return;
                 }
             }
+        }
+
+        public Thread getA() {
+            return a;
+        }
+
+        public void setA(Thread a) {
+            this.a = a;
         }
     }
 }

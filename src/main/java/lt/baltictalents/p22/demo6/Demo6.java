@@ -17,7 +17,9 @@ public class Demo6 {
 
         URL url = uri.toURL();
         try (
-                BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream(), "UTF-8"));
+                BufferedReader in = new BufferedReader(
+                        new InputStreamReader(
+                                url.openStream(), "UTF-8"));
         ) {
 
             String decodedString;

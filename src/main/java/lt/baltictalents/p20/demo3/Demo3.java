@@ -17,7 +17,8 @@ public class Demo3 {
                                 new FileInputStream("src/main/java/lt/baltictalents/p20/java-iso-8859-13.txt"),
                                 "ISO-8859-13"));
 
-                Writer out = new BufferedWriter(new FileWriter("src/main/java/lt/baltictalents/p20/output.txt"));
+                Writer out = new BufferedWriter(
+                            new FileWriter("src/main/java/lt/baltictalents/p20/output.txt"));
         ) {
 
             int c;

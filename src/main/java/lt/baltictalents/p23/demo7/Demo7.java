@@ -1,6 +1,6 @@
 package lt.baltictalents.p23.demo7;
 
-public class Demo6 {
+public class Demo7 {
 
     public static void main(String... args) throws InterruptedException {
 

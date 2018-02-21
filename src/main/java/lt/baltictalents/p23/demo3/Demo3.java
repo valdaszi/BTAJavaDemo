@@ -46,7 +46,7 @@ public class Demo3 {
 
                 if (Thread.interrupted()) {
                     System.out.println("B: Nutraukta");
-                    return;
+                    //return;
                 }
             }
         }

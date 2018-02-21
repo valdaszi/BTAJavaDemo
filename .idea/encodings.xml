@@ -3,6 +3,7 @@
   <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="ISO-8859-1">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/lt/baltictalents/p20/java-iso-8859-13.txt" charset="ISO-8859-13" />
+    <file url="file://$PROJECT_DIR$/src/main/java/lt/baltictalents/p20/output.txt" charset="ISO-8859-13" />
     <file url="file://$PROJECT_DIR$/src/main/java/lt/baltictalents/p20/output.txt" charset="US-ASCII" />
   </component>
 </project>
