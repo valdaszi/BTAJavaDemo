@@ -1,4 +1,4 @@
-package test;
+package lt.baltictalents.p24.demo5;
 
 public class A {
 

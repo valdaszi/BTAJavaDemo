@@ -4,6 +4,7 @@ package test;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import lt.baltictalents.p24.demo5.A;
 
 public class Test5 {
 

@@ -9,7 +9,7 @@ public class Demo2 {
         Logger logger = Logger.getLogger(Demo2.class.getName());
 
         System.out.println("Logger name: " + logger.getName());
-        System.out.println("Logger Level: " + logger.getParent().getHandlers()[0].getLevel());
+        //System.out.println("Logger Level: " + logger.getParent().getHandlers()[0].getLevel());
 
         logger.severe("Klaida");
         logger.warning("Įspėjimas");

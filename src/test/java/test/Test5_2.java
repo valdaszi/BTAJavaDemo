@@ -1,5 +1,6 @@
 package test;
 
+import lt.baltictalents.p24.demo5.A;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

@@ -2,8 +2,9 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2017-12-18T16:11:08</date>
-  <millis>1513606268093</millis>
+  <date>2018-02-22T15:10:21.783555Z</date>
+  <millis>1519312221783</millis>
+  <nanos>555000</nanos>
   <sequence>0</sequence>
   <logger>lt.baltictalents.p24.demo4.Demo4</logger>
   <level>WARNING</level>
@@ -13,8 +14,9 @@
   <message>Įspėjimas</message>
 </record>
 <record>
-  <date>2017-12-18T16:11:08</date>
-  <millis>1513606268135</millis>
+  <date>2018-02-22T15:10:21.904913Z</date>
+  <millis>1519312221904</millis>
+  <nanos>913000</nanos>
   <sequence>1</sequence>
   <logger>lt.baltictalents.p24.demo4.Demo4</logger>
   <level>SEVERE</level>
@@ -24,8 +26,9 @@
   <message>Klaida</message>
 </record>
 <record>
-  <date>2017-12-18T16:11:08</date>
-  <millis>1513606268138</millis>
+  <date>2018-02-22T15:10:21.907727Z</date>
+  <millis>1519312221907</millis>
+  <nanos>727000</nanos>
   <sequence>2</sequence>
   <logger>lt.baltictalents.p24.demo4.Demo4</logger>
   <level>INFO</level>
@@ -35,8 +38,9 @@
   <message>Pranešimas #1</message>
 </record>
 <record>
-  <date>2017-12-18T16:11:08</date>
-  <millis>1513606268140</millis>
+  <date>2018-02-22T15:10:21.910493Z</date>
+  <millis>1519312221910</millis>
+  <nanos>493000</nanos>
   <sequence>3</sequence>
   <logger>lt.baltictalents.p24.demo4.Demo4</logger>
   <level>INFO</level>
@@ -46,8 +50,9 @@
   <message>Pranešimas #2</message>
 </record>
 <record>
-  <date>2017-12-18T16:11:08</date>
-  <millis>1513606268142</millis>
+  <date>2018-02-22T15:10:21.913171Z</date>
+  <millis>1519312221913</millis>
+  <nanos>171000</nanos>
   <sequence>4</sequence>
   <logger>lt.baltictalents.p24.demo4.Demo4</logger>
   <level>INFO</level>
