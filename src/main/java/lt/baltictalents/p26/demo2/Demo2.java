@@ -6,11 +6,14 @@ import com.google.gson.GsonBuilder;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Demo2 {
 
     public static void main(String... args) throws IOException {
+
+        Arrays.stream(args).forEach(System.out::println);
 
         List<Item> items = new ArrayList<>();
 
