@@ -18,29 +18,29 @@ public class Demo2 {
 
         System.out.println("2016-03-31 add -1men:");
         calendar = new GregorianCalendar(2016, 2, 31);
-        System.out.println(calendar.getTime());
+        System.out.println("2016-03-31: " + calendar.getTime());
         calendar.add(Calendar.MONTH, -1);
-        System.out.println(calendar.getTime());
+        System.out.println("month -2: " + calendar.getTime());
         calendar.add(Calendar.MONTH, -1);
-        System.out.println(calendar.getTime());
+        System.out.println("month -1: " + calendar.getTime());
         calendar.add(Calendar.MONTH, -1);
-        System.out.println(calendar.getTime());
+        System.out.println("month -1: " + calendar.getTime());
 
         System.out.println("2016-03-31 roll false:");
         calendar = new GregorianCalendar(2016, 2, 31);
-        System.out.println(calendar.getTime());
+        System.out.println("2016-03-31: " + calendar.getTime());
         calendar.roll(Calendar.MONTH, false);
-        System.out.println(calendar.getTime());
+        System.out.println("month false: " + calendar.getTime());
         calendar.roll(Calendar.MONTH, false);
-        System.out.println(calendar.getTime());
+        System.out.println("month false: " + calendar.getTime());
         calendar.roll(Calendar.MONTH, false);
-        System.out.println(calendar.getTime());
+        System.out.println("month false: " + calendar.getTime());
 
         System.out.println("2016-03-31 roll -3:");
         calendar = new GregorianCalendar(2016, 2, 31);
-        System.out.println(calendar.getTime());
+        System.out.println("2016-03-31: " + calendar.getTime());
         calendar.roll(Calendar.MONTH, -3);
-        System.out.println(calendar.getTime());
+        System.out.println("month -3: " + calendar.getTime());
 
     }
 }
