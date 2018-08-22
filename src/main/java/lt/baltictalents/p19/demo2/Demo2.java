@@ -11,16 +11,16 @@ public class Demo2 {
         try {
             int a = calc(10, 0);
             System.out.println(a);
-        } catch (Exception e) {
-            System.out.println("Klaida su dalyba!!!");
+        } catch (ArithmeticException e) {
+            System.out.println("Klaida su dalyba!!!");//
         }
 
         try {
             List<Integer> b = new ArrayList<>();
             System.out.println(get(b, 1));
         } catch (IndexOutOfBoundsException e) {
-            System.out.println("Klaida su kolekcija!!! ");
-            //e.printStackTrace();
+            System.out.println("Klaida su kolekcija!!! " + e.getMessage());
+            e.printStackTrace();
         }
 
         System.out.println("Pabaiga");

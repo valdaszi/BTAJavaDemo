@@ -4,12 +4,14 @@ public class Demo4 {
 
     public static void main(String... args) {
 
-        try (A a = new A()) {
+        try (Worker a = new Worker("A"); Worker b = new Worker("B")) {
             a.work();
             a.work();
             a.work();
         } catch (Exception e) {
             System.out.println("Pagavau :)");
+        } finally {
+            System.out.println("Finally");
         }
 
         System.out.println("Finish");
@@ -17,14 +19,21 @@ public class Demo4 {
     }
 }
 
-class A implements AutoCloseable {
+class Worker implements AutoCloseable {
+
+    String name;
+
+    public Worker(String name) {
+        this.name = name;
+        System.out.println(name + " created");
+    }
 
     @Override
     public void close() {
-        System.out.println("A closed");
+        System.out.println(name + " closed");
     }
 
     public void work() {
-        System.out.println("A working...");
+        System.out.println(name + " working...");
     }
 }

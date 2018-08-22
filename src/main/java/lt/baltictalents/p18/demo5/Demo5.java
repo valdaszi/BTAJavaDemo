@@ -5,7 +5,7 @@ import java.text.MessageFormat;
 
 public class Demo5 {
 
-    public static void main(String... args) {
+    public static void main(String args) {
 
         String message = "Ant {1} guli {0} obuolys(iai)";
 

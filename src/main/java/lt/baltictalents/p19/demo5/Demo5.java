@@ -8,7 +8,7 @@ public class Demo5 {
     public static void main(String... args) {
 
         try {
-            int a = calc(10, 0);
+            int a = calc(10, 1);
             System.out.println(a);
 
             List<Integer> b = new ArrayList<>();
@@ -25,7 +25,7 @@ public class Demo5 {
     }
 
     static int calc(int a, int b) {
-        if (b == 0) throw new ArithmeticException("Galima dalyba iš nulio");
+        if (b == 1) throw new ArithmeticException("Dalyba iš 1 negalima :)");
 
         return a / b;
     }

@@ -22,6 +22,8 @@ public class Demo3 {
             System.out.println("bet šiaip tai viskas gerai :)");
         }
 
+        System.out.println("Pabaiga");
+
     }
 
     static int calc(int a, int b) {
