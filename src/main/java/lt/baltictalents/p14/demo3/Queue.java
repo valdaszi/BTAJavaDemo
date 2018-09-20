@@ -3,17 +3,17 @@ package lt.baltictalents.p14.demo3;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Queue<E> {
+public class Queue<T> {
 
-    private List<E> q = new ArrayList<>();
+    private List<T> q = new ArrayList<>();
 
-    public void push(E element) {
+    public void push(T element) {
         q.add(element);
     }
 
-    public E pull() {
+    public T pull() {
         if (q.size() > 0) {
-            E element = q.get(0);
+            T element = q.get(0);
             q.remove(0);
             return element;
         } else {

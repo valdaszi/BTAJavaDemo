@@ -4,23 +4,27 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Queue<String> queue = new Queue<>();
+        // Galima i eile prideti "String" tipo elementus
+        Queue<String> queue = new Queue();
         queue.push("Pirmas");
         queue.push("Antras");
         queue.push("Trečias");
         queue.push("Ketvirtas");
+        //queue.push(5);
 
         queue.pull();
 
         System.out.println(queue);
 
-        Queue<Integer> q2 = new Queue<>();
+        // Galima i sita eile prideti "Integer" tipo elementus
+        Queue<Integer> q2 = new Queue();
         q2.push(100);
         q2.push(200);
         System.out.println("pull: " + q2.pull());
         System.out.println("pull: " + q2.pull());
         System.out.println("pull: " + q2.pull());
         q2.push(300);
+        //q2.push("Keturi simtai");
 
         System.out.println(q2);
     }

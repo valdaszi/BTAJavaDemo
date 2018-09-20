@@ -8,18 +8,22 @@ public class Demo3 {
 
         final String appearance = randomAppearance();	// Current operating system
 
-        if (appearance.equals("OSX")) {
-            factory = new OSXFactory();
-        } else if(appearance.equals("Windows")) {
-            factory = new WinFactory();
-        } else {
-            throw new Exception("No such operating system");
-        }
+        factory = createFactoryFrom(appearance);
 
         final IButton button = factory.createButton();
 
         button.paint();
 
+    }
+
+    public static IGUIFactory createFactoryFrom(String appearance) throws Exception {
+        if (appearance.equals("OSX")) {
+            return new OSXFactory();
+        } else if(appearance.equals("Windows")) {
+            return new WinFactory();
+        } else {
+            throw new Exception("No such operating system");
+        }
     }
 
     /**

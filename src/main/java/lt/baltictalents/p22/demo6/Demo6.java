@@ -7,7 +7,7 @@ public class Demo6 {
 
     public static void main(String... args) throws URISyntaxException, MalformedURLException {
 
-        URI uri = new URI("https",
+        URI uri = new URI("http",
                 "postit.lt",
                 "/data",
                 "address=K.Baršausko g. 59, Kaunas",

@@ -20,7 +20,7 @@ public class Demo8 {
 
         // a.{3}s
 
-        String reg = "a.{3}s";
+        String reg = "a(.{3})s";
         System.out.println("reg: " + reg);
         pattern = Pattern.compile(reg);
         matcher = pattern.matcher(text);
@@ -28,7 +28,7 @@ public class Demo8 {
         while (matcher.find()) {
             // Get the matching string
             String match = matcher.group();
-            System.out.println(match);
+            System.out.println(match + ", 3: " + matcher.group(1));
         }
 
         // a.*s

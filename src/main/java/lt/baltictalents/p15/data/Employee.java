@@ -48,6 +48,7 @@ public class Employee {
         return "Employee{" +
                 "name='" + name + '\'' +
                 ", salary=" + salary +
+                ", department='" + department + '\'' +
                 '}';
     }
 }

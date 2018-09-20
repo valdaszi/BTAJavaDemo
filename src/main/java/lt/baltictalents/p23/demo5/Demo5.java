@@ -73,7 +73,9 @@ public class Demo5 {
 //            } catch (InterruptedException e) {
 //                e.printStackTrace();
 //            }
-            c++;
+            synchronized (this) {
+                c++;
+            }
         }
 
         public void decrement() {
@@ -82,7 +84,9 @@ public class Demo5 {
 //            } catch (InterruptedException e) {
 //                e.printStackTrace();
 //            }
-            c--;
+            synchronized (this) {
+                c--;
+            }
         }
 
         public long value() {

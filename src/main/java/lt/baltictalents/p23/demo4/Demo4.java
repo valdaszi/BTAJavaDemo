@@ -25,6 +25,8 @@ public class Demo4 {
 
         });
 
+//        Thread a = new A(b);
+
         b.setA(a);
         b.start();
 
@@ -58,3 +60,30 @@ public class Demo4 {
         }
     }
 }
+
+//class A extends Thread {
+//
+//    Thread b;
+//
+//    public A(Thread b) {
+//        this.b = b;
+//    }
+//
+//    @Override
+//    public void run() {
+//        try {
+//            b.join(600);
+//            b.interrupt();
+//        } catch (InterruptedException ignored) {}
+//
+//        for (int i = 0; i < 10; i++) {
+//            System.out.println("A: " + i);
+//            try {
+//                Thread.sleep(500);
+//            } catch (InterruptedException e) {
+//                System.out.println("A: Nutraukta");
+//                return;
+//            }
+//        }
+//    }
+//}

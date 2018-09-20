@@ -1,5 +1,7 @@
 package lt.baltictalents.p29.demo6_Prototype;
 
+import java.util.Objects;
+
 public class Demo6 {
 
     public static void main(String[] args) throws CloneNotSupportedException {

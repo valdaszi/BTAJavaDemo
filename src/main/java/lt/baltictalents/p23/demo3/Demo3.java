@@ -44,9 +44,9 @@ public class Demo3 {
                     System.out.println("B: " + i);
                 }
 
+                //if (Thread.currentThread().isInterrupted()) {
                 if (Thread.interrupted()) {
                     System.out.println("B: Nutraukta");
-                    //return;
                 }
             }
         }

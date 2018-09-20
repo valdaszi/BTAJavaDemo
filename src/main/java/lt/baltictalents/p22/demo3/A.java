@@ -4,13 +4,15 @@ import java.io.Serializable;
 
 public class A implements Serializable {
 
-    private static final long serialVersionUID = 4248538300856264363L;
+    private static final long serialVersionUID = 8481076133578922262L;
 
     private String a;
 
     private B b1;
 
     private B b2;
+
+    long l = 10L;
 
     public A(String a, B b1, B b2) {
         this.a = a;

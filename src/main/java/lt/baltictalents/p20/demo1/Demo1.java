@@ -24,7 +24,6 @@ public class Demo1 {
 
         } catch (IOException e) {
             e.printStackTrace();
-
         }
 
         long estimatedTime = System.nanoTime() - startTime;

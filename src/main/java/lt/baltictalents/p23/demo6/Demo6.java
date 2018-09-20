@@ -30,7 +30,7 @@ public class Demo6 {
         t1.join();
         t2.join();
 
-        System.out.println(list);
+        System.out.println("size=" + list.size() + ", " + list);
 
     }
 }

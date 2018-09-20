@@ -4,11 +4,14 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Circle circle = new Circle("green", 10);
-        System.out.println("Circle Area: " + circle.getArea());
+        Figure[] figuros = new Figure[] {
+                new Circle("green", 10),
+                new Ellipse("red", 11, 9)
+        };
 
-        Ellipse ellipse = new Ellipse("red", 11, 9);
-        System.out.println("Ellipse Area: " + ellipse.getArea());
-
+        for (Figure f : figuros) {
+            System.out.println("Area: " + f.getArea() +
+                    ", double area: " + f.getArea(2));
+        }
     }
 }

@@ -13,14 +13,16 @@ public class Demo1 {
 
         // Thread B
         B b = new B();
+        b.setName("Thread B");
         b.start();
 
         // Thread C
         new Thread(() -> loop("C", 100)).start();
 
+        System.out.println("Pabaiga");
     }
 
-    static void loop(String name, int sleep) {
+    private static void loop(String name, int sleep) {
         for (int i = 0; i < 10; i++) {
             System.out.println(Thread.currentThread().getName() + " -> " + name + ": " + i);
             try {

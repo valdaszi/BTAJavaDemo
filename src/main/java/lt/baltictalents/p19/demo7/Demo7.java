@@ -9,7 +9,7 @@ public class Demo7 {
             try {
                 a.start(i);
             } catch (KlaidaA e) {
-                e.printStackTrace();
+                //e.printStackTrace();
                 System.out.println("Klaida " + e.getMessage());
             }
         }
@@ -19,18 +19,18 @@ public class Demo7 {
 
 class A {
 
-    void work(int i) throws KlaidaA {
+    void work(int i) {
         if (i % 2 == 0) {
             throw new KlaidaA("Lyginis " + i);
         }
     }
 
-    void start(int i) throws KlaidaA {
+    void start(int i) {
         work(i);
     }
 }
 
-class KlaidaA extends Exception {
+class KlaidaA extends RuntimeException {
 
     KlaidaA(String message) {
         super(message);

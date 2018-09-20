@@ -11,9 +11,13 @@ public class Demo2 {
         B b = new B();
         b.start();
 
+        System.out.println("A ir B startavo");
+
         Thread.sleep(1000);
         b.interrupt();
+        t.interrupt();
 
+        System.out.println("Pabaiga");
     }
 
     static class A implements Runnable {

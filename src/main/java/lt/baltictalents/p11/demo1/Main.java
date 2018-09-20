@@ -1,5 +1,6 @@
 package lt.baltictalents.p11.demo1;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,15 +10,15 @@ public class Main {
 
         List<Integer> list = new ArrayList<>();
 
-        list.add(10);
+        list.add(new Integer(10));
         list.add(20);
         list.add(30);
         list.add(20);
         list.add(0, 40);
 
         System.out.print("Sąrašas:");
-        for (Integer i : list) {
-            System.out.print(" " + i);
+        for (Integer a : list) {
+            System.out.print(" " + a);
         }
         System.out.println();
 

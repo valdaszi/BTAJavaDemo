@@ -12,10 +12,11 @@ public class Mokinys {
     }
 
     double vidurkis() {
-        double suma = 0;
-        for (int p : this.a) {
-            suma += p;
+        if (a == null) return 0;
+        int sum = 0;
+        for (int p : a) {
+            sum += p;
         }
-        return suma / this.a.length;
+        return (double)sum / a.length;
     }
 }

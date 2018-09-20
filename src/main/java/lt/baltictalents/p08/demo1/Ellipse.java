@@ -12,10 +12,6 @@ public class Ellipse extends Figure {
         this.r2 = r2;
     }
 
-    @Override
-    public double getArea() {
-        return Math.PI * r1 * r2;
-    }
 
     public double getR1() {
         return r1;
@@ -23,5 +19,10 @@ public class Ellipse extends Figure {
 
     public double getR2() {
         return r2;
+    }
+
+    @Override
+    public double getArea() {
+        return Math.PI * r1 * r2;
     }
 }

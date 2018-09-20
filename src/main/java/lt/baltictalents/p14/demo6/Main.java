@@ -11,6 +11,5 @@ public class Main {
         List<Number> listN;
 
         //listN = listI; //Klaida!!!
-
     }
 }

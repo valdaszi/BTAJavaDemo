@@ -14,7 +14,7 @@ public class Demo1 {
 
         char[] chars = { 'L', 'a', 'b', 'a', 's' };
 
-        String s3 = new String(new char[] { 'L', 'a', 'b', 'a', 's' });
+        String s3 = new String(chars);
 
         System.out.println(s3);
 

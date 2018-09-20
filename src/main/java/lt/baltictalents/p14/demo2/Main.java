@@ -11,7 +11,10 @@ public class Main {
         double mass = earthWeight/EARTH.surfaceGravity();
 
         for (Planet p : Planet.values()) {
-            System.out.println("Your weight on " + p + " is " + p.surfaceWeight(mass) + "kg");
+            if (p != Planet.EARTH) {
+                System.out.println("Your weight on " + p +
+                        "(" + p.ordinal() + ")" + " is " + p.surfaceWeight(mass) + "kg");
+            }
         }
     }
 }
