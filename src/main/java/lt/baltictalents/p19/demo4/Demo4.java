@@ -3,8 +3,22 @@ package lt.baltictalents.p19.demo4;
 public class Demo4 {
 
     public static void main(String... args) {
+        new Demo4().start();
 
-        try (Worker a = new Worker("A"); Worker b = new Worker("B")) {
+        new Demo4().start2();
+    }
+
+    void start2() {
+        try (Worker a = new Worker("A")) {
+            a.work();
+        }
+    }
+
+    void start() {
+        try (
+            Worker a = new Worker("A");
+            Worker b = new Worker("B");
+        ) {
             a.work();
             a.work();
             a.work();
@@ -35,5 +49,6 @@ class Worker implements AutoCloseable {
 
     public void work() {
         System.out.println(name + " working...");
+        throw new RuntimeException("Klaida!!!");
     }
 }

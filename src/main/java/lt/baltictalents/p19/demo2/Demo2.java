@@ -12,7 +12,8 @@ public class Demo2 {
             int a = calc(10, 0);
             System.out.println(a);
         } catch (ArithmeticException e) {
-            System.out.println("Klaida su dalyba!!!");//
+            System.out.println("Klaida su dalyba!!!");
+            e.printStackTrace();
         }
 
         try {

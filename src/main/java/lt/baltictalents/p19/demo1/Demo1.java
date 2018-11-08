@@ -10,7 +10,7 @@ public class Demo1 {
         int a = calc(10, 2);
         System.out.println(a);
 
-        a =  calc(10, 0);
+        a = calc(10, 0);
         System.out.println(a);
 
         List<Integer> b = new ArrayList<>();

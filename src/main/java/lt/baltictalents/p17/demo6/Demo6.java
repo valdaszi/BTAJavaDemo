@@ -18,12 +18,12 @@ public class Demo6 {
         System.out.println(xmas);
 
         DateTimeFormatter formatter =
-                DateTimeFormatter.ofPattern("MMM d yyyy");
+                DateTimeFormatter.ofPattern("MMM d yyyy").withLocale(Locale.US);
 
         xmas = LocalDate.parse("Dec 24 2014", formatter);
         System.out.println(xmas);
 
-        formatter = DateTimeFormatter.ofPattern("yy MMMM d").withLocale(Locale.US);
+        formatter = DateTimeFormatter.ofPattern("yy MMMM d").withLocale(Locale.forLanguageTag("lt"));
         System.out.println(xmas.format(formatter));
 
         formatter = DateTimeFormatter.ofPattern("yyyy MMMM d").withLocale(Locale.FRANCE);

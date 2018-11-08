@@ -31,4 +31,11 @@ public enum Planet {
     double surfaceWeight(double otherMass) {
         return otherMass * surfaceGravity();
     }
+
+    @Override
+    public String toString() {
+        return this.name().toLowerCase() +
+                ", mass=" + mass +
+                ", radius=" + radius;
+    }
 }

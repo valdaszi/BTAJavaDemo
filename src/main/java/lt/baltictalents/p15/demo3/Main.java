@@ -2,23 +2,29 @@ package lt.baltictalents.p15.demo3;
 
 public class Main {
 
-    //@FunctionalInterface
+    @FunctionalInterface
     interface Converter<F, T> {
 
         T convert(F from);
 
-//        int getCounter();
+        //int getCounter();
+
+        default int getSomething() {
+            return 100;
+        }
 
     }
 
-    int counter = 0;
+    private int counter = 0;
 
     public static void main(String[] args) {
         new Main().start();
     }
 
-    void start() {
-        final int num = 10;
+    //int num = 10;
+
+    private void start() {
+        int num = 10;
 
         Converter<Integer, String> stringConverter =
                 from -> {
@@ -29,32 +35,20 @@ public class Main {
 //                new Converter<Integer, String>() {
 //                    @Override
 //                    public String convert(Integer from) {
-//                        this.inc(); // klaida!!!
-//                        return String.valueOf(from + num);
-//                    }
-//                };
-
-
-
-
-//                new Converter<Integer, String>() {
-//                    int counter = 0;
-//
-//                    @Override
-//                    public String convert(Integer from) {
-//                        this.counter++;
-//                        return String.valueOf(from + num);
+//                        Main.this.inc();
+//                        return String.valueOf(from + num + getSomething());
 //                    }
 //
 //                    @Override
-//                    public int getCounter() {
-//                        return this.counter;
+//                    public int getSomething() {
+//                        return -100;
 //                    }
 //                };
-
 
         String result = stringConverter.convert(2);
         System.out.println("result = " + result);
+
+        //num = 0;
 
         result = stringConverter.convert(-2);
         System.out.println("result = " + result);
@@ -63,7 +57,7 @@ public class Main {
         System.out.println(counter);
     }
 
-    void inc() {
+    private void inc() {
         counter++;
     }
 }

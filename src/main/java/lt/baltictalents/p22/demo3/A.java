@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class A implements Serializable {
 
-    private static final long serialVersionUID = 8481076133578922262L;
+    static final long serialVersionUID = -3L;
 
     private String a;
 
@@ -12,7 +12,8 @@ public class A implements Serializable {
 
     private B b2;
 
-    long l = 10L;
+    protected long l = 10L;
+
 
     public A(String a, B b1, B b2) {
         this.a = a;

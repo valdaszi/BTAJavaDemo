@@ -17,6 +17,7 @@ public class Demo5 {
         } catch (ArithmeticException e) {
             e.printStackTrace();
             System.out.println("Aritmetinė klaida: " + e.getLocalizedMessage());
+            throw new ArithmeticException("Nesamone vistik");
 
         } finally {
             System.out.println("bet šiaip tai viskas gerai :)");

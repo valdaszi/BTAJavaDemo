@@ -1,14 +1,12 @@
 package lt.baltictalents.p14.demo2;
 
-import static lt.baltictalents.p14.demo2.Planet.EARTH;
-
 public class Main {
 
     public static void main(String[] args) {
 
-        double earthWeight = 100;
+        double earthWeight = 100; // 100kg
 
-        double mass = earthWeight/EARTH.surfaceGravity();
+        double mass = earthWeight/Planet.EARTH.surfaceGravity();
 
         for (Planet p : Planet.values()) {
             if (p != Planet.EARTH) {

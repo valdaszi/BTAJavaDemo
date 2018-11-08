@@ -9,6 +9,9 @@ public class Demo5 {
         LocalDateTime dateTime = LocalDateTime.parse("2017-12-01T23:59:59.999");
         System.out.println(dateTime);
 
+        dateTime = LocalDateTime.of(2017, 12, 1, 23, 59, 0, 12345678);
+        System.out.println(dateTime);
+
         dateTime = LocalDateTime.now();
         System.out.println(dateTime);
 
@@ -20,6 +23,5 @@ public class Demo5 {
 
         dateTime = dateTime.plusSeconds(3600);
         System.out.println(dateTime);
-
     }
 }

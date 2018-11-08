@@ -21,6 +21,7 @@ public class Demo7 {
         out.write("param1=value1&param2=value2");
         out.close();
 
+
         try (BufferedReader in = new BufferedReader(
                 new InputStreamReader(
                         connection.getInputStream()))) {

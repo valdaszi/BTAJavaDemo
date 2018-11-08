@@ -19,9 +19,9 @@ public class Demo6 {
         list.add(new A("slyva", new B("citrina", 300), b));
 
 
-        //write(list);
+        write(list);
 
-        //read();
+        read();
 
         writeNode();
 

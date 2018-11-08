@@ -17,6 +17,15 @@ public class Main {
         list.add(new Employee("Petras", 1200.0, "sales"));
         list.add(new Employee("Ada", 1500.0, "administration"));
 
+//        Optional<Double> max = list.stream()
+//                .map(Employee::getSalary)  //.map(e -> e.getSalary())
+//                .max(Double::compareTo);   //.max((a, b) -> a < b ? -1 : a > b ? 1 : 0);
+        OptionalDouble max = list.stream()
+                .mapToDouble(Employee::getSalary)
+                .max();
+        System.out.println("Max atlyginimas: " + max.orElse(0.));
+
+
         System.out.println("stream of List:");
         list.stream().filter(e -> e.getSalary() > 1000.0).forEach(System.out::println);
 

@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class Main {
 
@@ -25,42 +26,44 @@ public class Main {
         // atspausdinti tuos kurie uzdirba daugiau nei 900
         // ir dirba administracijoje
         System.out.println(">900 is administracijos:");
-        Check<Employee> check = new Check<Employee>() {
+        Predicate<Employee> filter = new Predicate<Employee>() {
             @Override
             public boolean test(Employee e) {
                 return e.getSalary() > 900 &&
                         e.getDepartment().equals("administration");
             }
         };
-        filterByFilter(list, check);
+        filterByFilter(list, filter);
 
-        System.out.println(">1400 is administracijos:");
-        filterByFilter(list, e ->
-                        e.getSalary() > 1400 &&
-                                e.getDepartment().equals("administration")
-        );
-
-        System.out.println("<1000 is visur:");
-        filterByFilter(list, x -> x.getSalary() < 1000);
-
+        // atspausdinti tuos kurie uzdirba daugiau nei 900
+        // ir dirba ne administracijoje
+        System.out.println(">900 is ne administracijos:");
+        //Predicate<Employee> filter2 = e ->
+        //        e.getSalary() > 900 &&
+        //                !e.getDepartment().equals("administration");
+        //filterByFilter(list, filter2);
+        filterByFilter(list, x -> x.getSalary() > 900 &&
+                        !x.getDepartment().equals("administration"));
 
         System.out.println("Pagal atlyginimo mazejima:");
         list.sort((o1, o2) -> {
-            int b = 2;
-            return Double.compare(o2.getSalary(), o1.getSalary() * b);
+            //if (o1.getSalary() < o2.getSalary()) return 1;
+            //if (o1.getSalary() > o2.getSalary()) return -1;
+            //return 0;
+            return -Double.compare(o1.getSalary(), o2.getSalary());
         });
         for (Employee e : list) {
             System.out.println(e);
         }
 
-
-//        Collections.sort(list, (a, b) -> {
-//            int comp = a.getDepartment().compareTo(b.getDepartment());
-//            if (comp != 0) return comp;
-//            comp = a.getName().compareTo(b.getName());
-//            return comp;
-//        });
-//        System.out.println(list);
+        // Surusiuojame pagal skyrius ir pagal vardus:
+        Collections.sort(list, (a, b) -> {
+            int comp = a.getDepartment().compareTo(b.getDepartment());
+            if (comp != 0) return comp;
+            comp = a.getName().compareTo(b.getName());
+            return comp;
+        });
+        System.out.println(list);
     }
 
     public static void filter(List<Employee> list, double salary) {
@@ -71,19 +74,11 @@ public class Main {
         }
     }
 
-    public static void filterByFilter(List<Employee> list, Check<Employee> filter) {
+    public static void filterByFilter(List<Employee> list, Predicate<Employee> filter) {
         for (Employee e : list) {
             if (filter.test(e)) {
                 System.out.println(e);
             }
         }
     }
-
-    @FunctionalInterface
-    interface Check<T> {
-
-        boolean test(T e);
-
-    }
-
 }

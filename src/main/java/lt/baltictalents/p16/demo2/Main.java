@@ -1,9 +1,12 @@
 package lt.baltictalents.p16.demo2;
 
 import lt.baltictalents.p16.data.Employee;
+import lt.baltictalents.p30.demo3_Composite.Ellipse;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
+import java.util.stream.Stream;
 
 public class Main {
 
@@ -15,6 +18,7 @@ public class Main {
         list.add(new Employee("Ona", 900.0, "sales"));
         list.add(new Employee("Petras", 1200.0, "sales"));
         list.add(new Employee("Ada", 1500.0, "administration"));
+
 
         System.out.println("stream:");
 //        list.stream().filter(new Predicate<Employee>() {
@@ -28,10 +32,13 @@ public class Main {
 //                System.out.println(employee);
 //            }
 //        });
-        list.stream().filter(employee -> employee.getSalary() > 1000.0).forEach(System.out::println);
+        list.stream()
+                .filter(employee -> employee.getSalary() > 1000.0)
+                .forEach(x -> System.out.println(x));
 
         System.out.println("parallelStream:");
-        list.parallelStream().filter(e -> e.getSalary() < 1400.0).forEach(System.out::println);
-
+        list.parallelStream()
+                .filter(e -> e.getSalary() < 1400.0)
+                .forEach(System.out::println);
     }
 }

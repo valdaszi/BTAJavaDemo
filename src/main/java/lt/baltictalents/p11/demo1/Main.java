@@ -23,7 +23,9 @@ public class Main {
         System.out.println();
 
         System.out.println("Ar yra 20? = " + list.contains(20));
+        System.out.println("20 indeksas yra: " + list.indexOf(20));
         System.out.println("(1) = " + list.get(1));
+
 
         System.out.println("Išmetam is sąrašo (0) ir 20");
         list.remove(0);
@@ -55,6 +57,5 @@ public class Main {
 
         b.add(21);
         System.out.println("Ar yra 10,20,21? = " + list.containsAll(b));
-
     }
 }

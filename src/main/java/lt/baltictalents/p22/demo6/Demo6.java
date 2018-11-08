@@ -8,8 +8,8 @@ public class Demo6 {
     public static void main(String... args) throws URISyntaxException, MalformedURLException {
 
         URI uri = new URI("http",
-                "postit.lt",
-                "/data",
+                "postman-echo.com",
+                "/get",
                 "address=K.Baršausko g. 59, Kaunas",
                 null);
 
@@ -20,11 +20,14 @@ public class Demo6 {
                 BufferedReader in = new BufferedReader(
                         new InputStreamReader(
                                 url.openStream(), "UTF-8"));
+
+                Writer ou = new FileWriter("src/main/java/lt/baltictalents/p22/output.txt")
         ) {
 
             String decodedString;
             while ((decodedString = in.readLine()) != null) {
                 System.out.println(decodedString);
+                ou.write(decodedString + "\n");
             }
 
 

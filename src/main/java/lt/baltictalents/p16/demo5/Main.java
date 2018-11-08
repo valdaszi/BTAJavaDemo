@@ -25,8 +25,13 @@ public class Main {
           }
           return foundAny ? OptionalInt.of(result) : OptionalInt.empty();
          */
-        OptionalInt reduce = IntStream.range(1, 101).reduce((x, y) -> x + y);
-        System.out.println("reduce 1: " + reduce);
+        OptionalInt reduce = IntStream.range(1, 101).reduce((x, y) -> {
+            //System.out.println("(x,y)=(" + x + "," + y + ")");
+            return x + y;
+        });
+        System.out.println("reduce 1: " +
+                //(reduce.isPresent() ? reduce.getAsInt() : 0));
+                reduce.orElse(0));
 
         /*
           reduce(identity, accumulator):
@@ -58,7 +63,7 @@ public class Main {
             A rez = s.copy();
             if (x % 2 == 0) rez.setEven(rez.getEven() + x);
             else rez.setOdd(rez.getOdd() + x);
-            System.out.println("a: (" + s + ", " + x + ") -> " + rez);
+            //System.out.println("a: (" + s + ", " + x + ") -> " + rez);
             return rez;
         };
 
@@ -66,21 +71,24 @@ public class Main {
             A rez = s.copy();
             rez.setOdd(rez.getOdd() + x.getOdd());
             rez.setEven(rez.getEven() + x.getEven());
-            System.out.println("c: (" + s + ", " + x + ") -> " + rez);
+            //System.out.println("c: (" + s + ", " + x + ") -> " + rez);
             return rez;
         };
 
+        //long start = System.currentTimeMillis();
         A sum1 = IntStream.range(1, 11)
                 .boxed()
-                //.parallel() - jei ne parallel tai combiner neiškviečiamas!!!
                 .reduce(new A(0, 0), accumulator, combiner);
         System.out.println("reduce 3.1: " + sum1);
+        //System.out.println("Viso normal: " + (System.currentTimeMillis() - start) + "ms");
 
+        //start = System.currentTimeMillis();
         A sum2 = IntStream.range(1, 11)
                 .boxed()
                 .parallel()
                 .reduce(new A(0, 0), accumulator, combiner);
         System.out.println("reduce 3.2: " + sum2);
+        //System.out.println("Viso parallel: " + (System.currentTimeMillis() - start) + "ms");
     }
 }
 

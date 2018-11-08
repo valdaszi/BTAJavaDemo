@@ -22,7 +22,8 @@ public class Main {
         // Map
         int suma = IntStream.range(1, 201)
                 .filter(x -> x % 2 == 0)
-                .map(x -> x / 2).sum();
+                .map(x -> x / 2)
+                .sum();
         System.out.println("Suma " + suma);
 
         // Sorted

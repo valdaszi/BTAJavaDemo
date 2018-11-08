@@ -5,7 +5,7 @@ import java.text.MessageFormat;
 
 public class Demo5 {
 
-    public static void main(String args) {
+    public static void main(String... args) {
 
         String message = "Ant {1} guli {0} obuolys(iai)";
 
@@ -26,6 +26,7 @@ public class Demo5 {
             System.out.println(result);
 
         }
+        System.out.println(MessageFormat.format(message, 10, "stalo"));
 
 
         System.out.println("Bandymas #3");
@@ -56,6 +57,7 @@ public class Demo5 {
 
         }
 
+        System.out.println(messageFormat.format(new Object[] { 10, "stalo" }));
         System.out.println(messageFormat.format(new Object[] { 20, "stalo" }));
         System.out.println(messageFormat.format(new Object[] { 21, "stalo" }));
         System.out.println(messageFormat.format(new Object[] { 29, "stalo" }));

@@ -17,6 +17,8 @@ public class Demo7 {
         Locale locale = new Locale("lt");
         dateFormat = new SimpleDateFormat("yyyy LLLL 'mėn.' d 'd.'", locale);
         System.out.println(dateFormat.format(date));
+        dateFormat = new SimpleDateFormat("yyyy MMMM 'mėn.' d 'd.'", locale);
+        System.out.println(dateFormat.format(date));
 
     }
 }
