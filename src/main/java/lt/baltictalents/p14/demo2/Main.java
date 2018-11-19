@@ -14,5 +14,8 @@ public class Main {
                         "(" + p.ordinal() + ")" + " is " + p.surfaceWeight(mass) + "kg");
             }
         }
+
+        System.out.println("SUN: " + Planet.SUN.ordinal());
+        System.out.println("MERCURY: " + Planet.MERCURY.ordinal());
     }
 }

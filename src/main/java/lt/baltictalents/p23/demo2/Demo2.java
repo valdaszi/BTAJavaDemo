@@ -2,6 +2,9 @@ package lt.baltictalents.p23.demo2;
 
 public class Demo2 {
 
+    static int sleepTimeA = 500;
+    static int sleepTimeB = 1000;
+
     public static void main(String... args) throws InterruptedException {
 
         A a = new A();
@@ -27,9 +30,10 @@ public class Demo2 {
             for (int i = 0; i < 10; i++) {
                 System.out.println("A: " + i);
                 try {
-                    Thread.sleep(500);
+                    Thread.sleep(sleepTimeA);
                 } catch (InterruptedException e) {
                     System.out.println("A: Nutraukta");
+                    sleepTimeB = 100;
                     return;
                 }
             }
@@ -43,10 +47,10 @@ public class Demo2 {
             for (int i = 0; i < 10; i++) {
                 System.out.println("B: " + i);
                 try {
-                    Thread.sleep(200);
+                    Thread.sleep(sleepTimeB);
                 } catch (InterruptedException e) {
                     System.out.println("B: Nutraukta");
-                    return;
+                    //return;
                 }
             }
         }

@@ -29,5 +29,6 @@ public class Demo3 {
         logger.finest("Detaliausias");
 
         logger.log(Level.WARNING, "Kitas Įspėjimas");
+        logger.log(Level.SEVERE, "Klaida 2");
     }
 }

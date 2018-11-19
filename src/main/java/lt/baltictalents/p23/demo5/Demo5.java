@@ -2,7 +2,7 @@ package lt.baltictalents.p23.demo5;
 
 public class Demo5 {
 
-    static final long LOOP = 1000000; //100;
+    static final long LOOP = 100; //0000; //100;
 
     public static void main(String... args) throws InterruptedException {
 
@@ -68,22 +68,22 @@ public class Demo5 {
         private long c = 0;
 
         public void increment() {
-//            try {
-//                Thread.sleep(10);
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             synchronized (this) {
                 c++;
             }
         }
 
         public void decrement() {
-//            try {
-//                Thread.sleep(10);
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             synchronized (this) {
                 c--;
             }

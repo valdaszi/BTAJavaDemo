@@ -15,6 +15,7 @@ public class Demo3 {
         Thread.sleep(10);
         b.interrupt();
 
+        System.out.println("Pabaiga");
     }
 
     static class A implements Runnable {
@@ -47,6 +48,7 @@ public class Demo3 {
                 //if (Thread.currentThread().isInterrupted()) {
                 if (Thread.interrupted()) {
                     System.out.println("B: Nutraukta");
+                    return;
                 }
             }
         }

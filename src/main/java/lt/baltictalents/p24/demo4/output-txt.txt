@@ -1,5 +1,0 @@
-2018-09-05T07:08:25.299	lt.baltictalents.p24.demo4.Demo4	main	WARNING	Įspėjimas
-2018-09-05T07:08:25.342	lt.baltictalents.p24.demo4.Demo4	main	SEVERE	Klaida
-2018-09-05T07:08:25.344	lt.baltictalents.p24.demo4.Demo4	main	INFO	Pranešimas "cia kazkas kabutese" {#1} 
-2018-09-05T07:08:25.346	lt.baltictalents.p24.demo4.Demo4	main	INFO	Pranešimas #2
-2018-09-05T07:08:25.348	lt.baltictalents.p24.demo4.Demo4	main	INFO	Pranešimas #3

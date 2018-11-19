@@ -12,20 +12,25 @@ public class Demo7 {
 
         // replaceFirst()
 
-        System.out.println("ananasas: an -> Nan: " + "ananasas".replaceFirst("an", "Nan"));
+        System.out.println("ananasas: a. -> Nan: " + "ananasas".replaceFirst("a.", "Nan"));
 
         // replaceAll()
 
-        System.out.println("ananasas: an -> Nan: " + "ananasas".replaceAll("an", "Nan"));
+        System.out.println("ananasas: a. -> Nan: " + "ananasas".replaceAll("a.", "Nan"));
         System.out.println("13/12/2018 -> " + "13/12/2018".replaceAll("(\\d+)/(\\d+)/(\\d+)", "$3-$2-$1"));
 
         // split()
 
-        String[] strings = "ananasas agurkas apelsinas abrikosas".split("as ");
+        String[] strings = "ananasas\t agurkas   apelsinas abrikosas".split("as((\\s+)|$)");
         System.out.println(strings.length + ": ");
         for (String s : strings) System.out.println(s);
 
-        strings = "ananasas agurkas apelsinas abrikosas".split("as ", 2);
+        strings = "ananasas agurkas apelsinas abrikosas".split("as\\s+", 2);
+        System.out.println(strings.length + ": ");
+        for (String s : strings) System.out.println(s);
+
+        strings = "aronija2 ananasas,agurkas-apelsinas;abrikosas.arbuzas?agurotis!agrastas_anakardis$avokadas"
+                .split("[\\d_\\W]+");
         System.out.println(strings.length + ": ");
         for (String s : strings) System.out.println(s);
     }

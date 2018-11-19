@@ -6,9 +6,9 @@ import java.util.logging.Logger;
 
 public class Demo2 {
 
-    public static void main(String... args) {
+    static Logger logger = Logger.getLogger(Demo2.class.getName());
 
-        Logger logger = Logger.getLogger(Demo2.class.getName());
+    public static void main(String... args) {
 
         System.out.println("Logger name: " + logger.getName());
         System.out.println("Logger Level: " + logger.getParent().getHandlers()[0].getLevel());
