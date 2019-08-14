@@ -1,10 +1,15 @@
 package lt.baltictalents.p29.demo6_Prototype;
 
-public class Prototype implements Cloneable {
+public abstract class Prototype implements Cloneable {
 
     private int a = 0;
 
     public Prototype(int a) {
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         this.a = a;
     }
 

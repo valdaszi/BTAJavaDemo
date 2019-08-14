@@ -13,11 +13,11 @@ public class Demo3 {
     public static void main(String... args) throws InterruptedException, IOException {
 
         Logger logger = Logger.getLogger(Demo3.class.getName());
-        logger.setLevel(Level.WARNING);
+        logger.setLevel(Level.ALL);
 
         Logger root = Logger.getLogger("");
         for (Handler handler : root.getHandlers()) {
-            handler.setLevel(Level.CONFIG);
+            handler.setLevel(Level.FINER);
         }
 
         logger.severe("Klaida");

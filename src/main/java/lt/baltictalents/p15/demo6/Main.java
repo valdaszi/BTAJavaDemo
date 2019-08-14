@@ -12,6 +12,16 @@ public class Main {
     static class A {
 
         void calculate() {
+            // grazinti didesni skaiciu, t.y. rasti max
+//            Calculate<Double> c = (a, b) -> {
+//                //if (a > b) return a;
+//                //return b;
+//                return a > b ? a : b;
+//            };
+
+//            Calculate<Double> c = (a, b) -> a > b ? a : b;
+
+//            Calculate<Double> c = (a, b) -> Math.max(a, b);
             Calculate<Double> c = Math::max;
 
             Double result = c.calc(2.9, 3.0);

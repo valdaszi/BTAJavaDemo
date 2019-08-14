@@ -24,7 +24,7 @@ public class Test5_2 {
 
         if (true) {
 
-            fail("kazkoks klaidos paaiskinimas");
+            //fail("kazkoks klaidos paaiskinimas");
         }
     }
 }

@@ -17,5 +17,10 @@ public class Demo4 {
                 planet, new Date(), event);
         System.out.println(result);
 
+        result = MessageFormat.format(
+                "{1} planetoje {0} atsitiko toks dalykas.",
+                planet, new Date(), event);
+        System.out.println(result);
+
     }
 }

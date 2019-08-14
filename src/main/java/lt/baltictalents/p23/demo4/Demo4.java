@@ -14,8 +14,7 @@ public class Demo4 {
             try {
                 b.join(600);
                 b.interrupt();
-            } catch (InterruptedException ignored) {
-            }
+            } catch (InterruptedException ignored) {}
 
             for (int i = 0; i < 10; i++) {
                 System.out.println("A: " + i);
@@ -34,7 +33,6 @@ public class Demo4 {
 
         a.start();
     }
-
 
     static class B extends Thread {
 

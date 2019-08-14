@@ -2,6 +2,7 @@ package lt.baltictalents.p18.demo2;
 
 import java.text.NumberFormat;
 import java.text.ParseException;
+import java.util.Currency;
 import java.util.Locale;
 
 public class Demo2 {
@@ -23,6 +24,6 @@ public class Demo2 {
         System.out.println(x);
 
         System.out.println(numberFormat.format(x));
-
+        System.out.println(NumberFormat.getNumberInstance(Locale.US).format(x));
     }
 }

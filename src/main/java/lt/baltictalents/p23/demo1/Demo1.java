@@ -1,9 +1,5 @@
 package lt.baltictalents.p23.demo1;
 
-import java.math.BigInteger;
-import java.util.HashMap;
-import java.util.Map;
-
 public class Demo1 {
 
     public static void main(String... args) {
@@ -18,12 +14,13 @@ public class Demo1 {
 
         // Thread B
         B b = new B();
+        b.setName("Thread B");
         b.start();
 
         // Thread C
         new Thread(() -> loop("C", 100)).start();
 
-        System.out.println("End");
+        System.out.println("Pabaiga");
     }
 
     static void loop(String name, int sleep) {
@@ -54,4 +51,3 @@ public class Demo1 {
 
     }
 }
-

@@ -11,7 +11,7 @@ public class Staff {
 
     public Staff(String name, String address, BigDecimal amount, LocalDate hired, LocalDate fired) {
         this.man = new Man(name, address);
-        this.salary = new Salary(amount.doubleValue(), hired, fired);
+        this.salary = new Salary(amount, hired, fired);
     }
 
 
@@ -32,11 +32,11 @@ public class Staff {
     }
 
     public BigDecimal getAmount() {
-        return BigDecimal.valueOf(salary.getAmount());
+        return salary.getAmount();
     }
 
     public void setAmount(BigDecimal amount) {
-        salary.setAmount(amount.doubleValue());
+        salary.setAmount(amount);
     }
 
     public LocalDate getHired() {

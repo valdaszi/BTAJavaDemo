@@ -30,11 +30,10 @@ public class Main {
     public static void main(String[] args) {
 
         Calculate<A, Double> c = A::new;
-
 //        Calculate<A, Double> c2 = n -> new A(n);
 
         A a = c.create(2.0);
-        Double result = a.calculate(10.,5.);
+        Double result = a.calculate(10., 5.);
         System.out.println("result = " + result);
 
     }

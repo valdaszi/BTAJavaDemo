@@ -29,7 +29,6 @@ public class Demo5 {
         System.out.println("Counter2: " + c2.value());
     }
 
-
     static class A implements Runnable {
 
         private Counter c1, c2;
@@ -82,6 +81,6 @@ public class Demo5 {
         long value() {
             return c;
         }
+
     }
 }
-

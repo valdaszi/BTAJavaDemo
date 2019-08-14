@@ -33,10 +33,20 @@ public class Demo4 {
         });
         logger.addHandler(logTxt);
 
+        Handler logJson = new FileHandler("src/main/java/lt/baltictalents/p24/demo4/output-json.txt");
+        logJson.setFormatter(new Formatter() {
+             @Override
+             public String format(LogRecord record) {
+                 return "{ \"Date\":" + LocalDateTime.ofInstant(Instant.ofEpochMilli(record.getMillis()), ZoneId.of("UTC")).toString() +
+                         ", \"message\":" + "\"" + record.getMessage().replace("\"", "\\\"") + "\" }\n";
+             }
+         });
+        logger.addHandler(logJson);
+
 
         logger.warning("Įspėjimas");
         logger.severe("Klaida");
-        logger.info("Pranešimas #1");
+        logger.info("Pranešimas \"cia kazkas kabutese\" {#1} ");
         logger.info("Pranešimas #2");
         logger.info("Pranešimas #3");
     }

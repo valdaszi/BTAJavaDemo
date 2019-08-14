@@ -15,5 +15,7 @@ public class Demo1 {
         Logger logger = Logger.getLogger(Demo1.class.getName());
 
         logger.severe("Rimta klaida !!!");
+        logger.warning("Įspėjimas !");
+
     }
 }

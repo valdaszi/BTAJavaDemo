@@ -9,7 +9,7 @@ public class Main {
 
     static class A {
 
-        public void methodA() {
+        static public void methodA() {
             System.out.println("Class A");
         }
 
@@ -28,7 +28,7 @@ public class Main {
         A a = new A();
         B b = new B();
 
-        check(a::methodA);
+        check(A::methodA);
         check(b::methodB);
 
     }

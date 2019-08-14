@@ -26,6 +26,7 @@ public class Demo5 {
             System.out.println(result);
 
         }
+        System.out.println(MessageFormat.format(message, 10, "stalo"));
 
 
         System.out.println("Bandymas #3");
@@ -56,6 +57,7 @@ public class Demo5 {
 
         }
 
+        System.out.println(messageFormat.format(new Object[] { 10, "stalo" }));
         System.out.println(messageFormat.format(new Object[] { 20, "stalo" }));
         System.out.println(messageFormat.format(new Object[] { 21, "stalo" }));
         System.out.println(messageFormat.format(new Object[] { 29, "stalo" }));

@@ -1,10 +1,10 @@
-Feb 22, 2018 5:10:21 PM lt.baltictalents.p24.demo4.Demo4 main
+Sep 05, 2018 10:08:25 AM lt.baltictalents.p24.demo4.Demo4 main
 WARNING: Įspėjimas
-Feb 22, 2018 5:10:21 PM lt.baltictalents.p24.demo4.Demo4 main
+Sep 05, 2018 10:08:25 AM lt.baltictalents.p24.demo4.Demo4 main
 SEVERE: Klaida
-Feb 22, 2018 5:10:21 PM lt.baltictalents.p24.demo4.Demo4 main
-INFO: Pranešimas #1
-Feb 22, 2018 5:10:21 PM lt.baltictalents.p24.demo4.Demo4 main
+Sep 05, 2018 10:08:25 AM lt.baltictalents.p24.demo4.Demo4 main
+INFO: Pranešimas "cia kazkas kabutese" {#1} 
+Sep 05, 2018 10:08:25 AM lt.baltictalents.p24.demo4.Demo4 main
 INFO: Pranešimas #2
-Feb 22, 2018 5:10:21 PM lt.baltictalents.p24.demo4.Demo4 main
+Sep 05, 2018 10:08:25 AM lt.baltictalents.p24.demo4.Demo4 main
 INFO: Pranešimas #3

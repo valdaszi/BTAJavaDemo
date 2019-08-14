@@ -5,23 +5,23 @@ import java.time.LocalDate;
 
 public class Salary {
 
-    private double amount;
+    private BigDecimal amount;
 
     private LocalDate hired;
 
     private LocalDate fired;
 
-    public Salary(double amount, LocalDate hired, LocalDate fired) {
+    public Salary(BigDecimal amount, LocalDate hired, LocalDate fired) {
         this.amount = amount;
         this.hired = hired;
         this.fired = fired;
     }
 
-    public double getAmount() {
+    public BigDecimal getAmount() {
         return amount;
     }
 
-    public void setAmount(double amount) {
+    public void setAmount(BigDecimal amount) {
         this.amount = amount;
     }
 

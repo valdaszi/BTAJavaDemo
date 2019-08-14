@@ -15,11 +15,14 @@ public class Main {
         Function<String, Integer> convert = Integer::parseInt;
         System.out.println("convert 123 -> " + convert.apply("123"));
 
-        Predicate<Integer> positive = x -> x > 0;
+        Predicate<Integer> positive = x -> x != null && x > 0;
         System.out.println("positive(1) " + positive.test(1));
         System.out.println("positive(-2) " + positive.test(-2));
+        System.out.println("positive(null) " + positive.test(null));
 
         Supplier<Integer> generator = new Random()::nextInt;
+        //Random r = new Random();
+        // ... = () -> r.nextInt();
 
         List<Optional<Integer>> list = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
@@ -31,6 +34,7 @@ public class Main {
         }
         long sum = 0;
         for (Optional<Integer> opt : list) {
+            //sum += opt.isPresent() ? opt.get() : 0;
             sum += opt.orElse(0);
         }
         System.out.println("sum = " + sum);

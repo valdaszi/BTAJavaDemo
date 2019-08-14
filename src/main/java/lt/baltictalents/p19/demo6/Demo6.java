@@ -8,17 +8,20 @@ public class Demo6 {
     public static void main(String... args) {
 
         try {
-            System.out.println( parse("123.45") );
-            System.out.println( parse("0a") );
-            System.out.println( parse("abc") );
-        } catch (ParseException e) {
-            //e.printStackTrace();
-            System.out.println("Klaida: " + e.getMessage());
+            System.out.println(parse("123.45"));
+            System.out.println(parse("1a"));
+            System.out.println(parse("abc"));
+        } catch (ParseException | ArithmeticException e) {
+            e.printStackTrace();
+            System.err.println("Klaida: " + e.getMessage());
+        } finally {
+            System.out.println("Beveik pabaiga");
         }
 
+        System.out.println("Tikra pabaiga");
     }
 
-    static Integer parse(String a) throws ParseException {
+    static int parse(String a) throws ParseException {
         NumberFormat nf = NumberFormat.getIntegerInstance();
         int i = nf.parse(a).intValue();
 

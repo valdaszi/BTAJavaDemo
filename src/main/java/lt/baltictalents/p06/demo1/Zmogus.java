@@ -16,7 +16,7 @@ class Zmogus {
     }
 
     String pilnasVardas() {
-        return vardas + (pavarde == null ? "" : ' ' + pavarde);
+        return vardas + (pavarde == null ? "" : (" " + pavarde));
     }
 
     String pilnasVardas(String titulas) {

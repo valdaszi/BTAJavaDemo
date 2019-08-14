@@ -26,7 +26,7 @@ public class Main {
 
         System.out.println("Ar yra 20? = " + queue.contains(20));
 
-        System.out.println("Išmetam is sąrašo paskutinį, t.y. 10");
+        System.out.println("Išmetam is sąrašo paskutinį/pirmą, t.y. 10");
         queue.poll();
 
         System.out.print("Eilė:");

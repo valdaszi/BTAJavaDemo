@@ -1,6 +1,7 @@
 package lt.baltictalents.p17.demo4;
 
 import java.time.LocalDate;
+import java.time.Month;
 import java.time.temporal.WeekFields;
 import java.util.Locale;
 
@@ -11,6 +12,9 @@ public class Demo4 {
     public static void main(String... args) {
 
         LocalDate date = LocalDate.parse("2017-12-01");
+        System.out.println(date);
+
+        date = LocalDate.of(2017, 12, 1);
         System.out.println(date);
 
         date = LocalDate.now();
@@ -28,5 +32,14 @@ public class Demo4 {
 
         LocalDate date2 = date.plusDays(30);
         System.out.println(date2);
+
+        LocalDate dateA = LocalDate.of(2018, 3, 31);
+        LocalDate dateB = dateA.plusMonths(1);
+        System.out.println(dateA + " +1men = " + dateB);
+        LocalDate dateC = dateB.plusMonths(1);
+        System.out.println(" +1men = " + dateC);
+        LocalDate dateD = dateA.plusMonths(2);
+        System.out.println(dateA + " +2men = " + dateD);
+
     }
 }

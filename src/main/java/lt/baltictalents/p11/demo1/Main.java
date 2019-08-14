@@ -1,5 +1,6 @@
 package lt.baltictalents.p11.demo1;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,20 +10,22 @@ public class Main {
 
         List<Integer> list = new ArrayList<>();
 
-        list.add(10);
+        list.add(new Integer(10));
         list.add(20);
         list.add(30);
         list.add(20);
         list.add(0, 40);
 
         System.out.print("Sąrašas:");
-        for (Integer i : list) {
-            System.out.print(" " + i);
+        for (Integer a : list) {
+            System.out.print(" " + a);
         }
         System.out.println();
 
         System.out.println("Ar yra 20? = " + list.contains(20));
+        System.out.println("20 indeksas yra: " + list.indexOf(20));
         System.out.println("(1) = " + list.get(1));
+
 
         System.out.println("Išmetam is sąrašo (0) ir 20");
         list.remove(0);
@@ -54,6 +57,5 @@ public class Main {
 
         b.add(21);
         System.out.println("Ar yra 10,20,21? = " + list.containsAll(b));
-
     }
 }

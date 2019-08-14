@@ -10,6 +10,10 @@ public abstract class Figure {
 
     public abstract double getArea();
 
+    public double getArea(double n) {
+        return getArea() * n;
+    }
+
     public String getColor() {
         return color;
     }

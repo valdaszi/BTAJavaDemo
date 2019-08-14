@@ -18,6 +18,7 @@ public enum Planet {
     Planet(double mass, double radius) {
         this.mass = mass;
         this.radius = radius;
+
     }
 
     // universal gravitational constant  (m3 kg-1 s-2)
@@ -29,5 +30,12 @@ public enum Planet {
 
     double surfaceWeight(double otherMass) {
         return otherMass * surfaceGravity();
+    }
+
+    @Override
+    public String toString() {
+        return this.name().toLowerCase() +
+                ", mass=" + mass +
+                ", radius=" + radius;
     }
 }

@@ -17,5 +17,6 @@ public class Employee {
         public String print() {
             return Employee.this.name + " salary " + this.salary + "€/h"  ;
         }
+
     }
 }

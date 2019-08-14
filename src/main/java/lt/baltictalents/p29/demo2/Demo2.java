@@ -9,7 +9,7 @@ public class Demo2 {
 
         Staff staff = new Staff(
                 "Jonas", "Babtai",
-                BigDecimal.valueOf(1000),
+                BigDecimal.valueOf(123456, 2),
                 LocalDate.of(2016, 2, 29),
                 LocalDate.of(2017, 1, 31));
 

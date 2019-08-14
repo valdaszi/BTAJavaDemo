@@ -2,7 +2,7 @@ package lt.baltictalents.p07.demo1;
 
 public class Zmogus {
 
-    static int kiekis = 0;
+    private static int kiekis = 0;
 
     private String vardas;
 
@@ -11,6 +11,10 @@ public class Zmogus {
     public Zmogus(String vardas) {
         this.vardas = vardas;
         kiekis++;
+    }
+
+    public static int getKiekis() {
+        return kiekis;
     }
 
     public String pilnasVardas() {

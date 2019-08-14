@@ -1,10 +1,10 @@
 package lt.baltictalents.p14.demo4;
 
+import java.math.BigDecimal;
+
 public class Main {
 
     public static void main(String[] args) {
-
-        //ListIntSum<String> list = new ListIntSum<>()
 
         ListIntSum<Double> list = new ListIntSum<>();
         list.add(1.0);

@@ -13,4 +13,5 @@ public interface Salary {
     static double getTotal(double salary, double percent) {
         return salary * (1.0 + percent / 100.0);
     }
+
 }

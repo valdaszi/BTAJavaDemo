@@ -2,6 +2,9 @@ package lt.baltictalents.p26.demo1;
 
 import java.io.IOException;
 
+/**
+ * Labai svarbi klasė šitame projekte
+ */
 public class A {
 
     /**
@@ -11,7 +14,7 @@ public class A {
 
     /**
      * Na o čia svarbus metodas
-     * @throws IOException
+     * @throws IOException kai kažkas atsitinka
      *
      * @see Versions
      */

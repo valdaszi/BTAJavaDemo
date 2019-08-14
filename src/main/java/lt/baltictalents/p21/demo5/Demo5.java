@@ -13,6 +13,8 @@ public class Demo5 {
         System.out.println("indexOf(ger) = " + s.indexOf("ger"));
         System.out.println("indexOf(ger, 20) = " + s.indexOf("ger", 20));
         System.out.println("lastIndexOf(ger) = " + s.lastIndexOf("ger"));
+        System.out.println("indexOf(ger) = " + s.indexOf("ger"));
+        System.out.println("indexOf(geg) = " + s.indexOf("geg"));
 
         // replace()
         System.out.println("replace(ger, Gier) = " + s.replace("ger", "Gier"));
