@@ -1,5 +1,8 @@
 package lt.baltictalents.p23.demo4;
 
+/**
+ * join - laukia kol threadas, kurio join metodas kviečiamas, baigsis
+ */
 public class Demo4 {
 
     public static void main(String... args) {
@@ -11,7 +14,8 @@ public class Demo4 {
             try {
                 b.join(600);
                 b.interrupt();
-            } catch (InterruptedException ignored) {}
+            } catch (InterruptedException ignored) {
+            }
 
             for (int i = 0; i < 10; i++) {
                 System.out.println("A: " + i);
@@ -30,6 +34,7 @@ public class Demo4 {
 
         a.start();
     }
+
 
     static class B extends Thread {
 

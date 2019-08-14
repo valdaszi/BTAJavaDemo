@@ -1,12 +1,15 @@
 package lt.baltictalents.p23.demo5;
 
+/**
+ * Nesaugu vykdyti to pačio lauko redagavimus iš skirtingų threadų
+ */
 public class Demo5 {
 
-    static final long LOOP = 1000000; //100;
+    private static final long LOOP = 1_000_000;
 
     public static void main(String... args) throws InterruptedException {
 
-        Long start = System.nanoTime();
+        long start = System.nanoTime();
 
         Counter c1 = new Counter();
         Counter c2 = new Counter();
@@ -26,11 +29,12 @@ public class Demo5 {
         System.out.println("Counter2: " + c2.value());
     }
 
+
     static class A implements Runnable {
 
         private Counter c1, c2;
 
-        public A(Counter c1, Counter c2) {
+        A(Counter c1, Counter c2) {
             this.c1 = c1;
             this.c2 = c2;
         }
@@ -48,7 +52,7 @@ public class Demo5 {
 
         private Counter c1, c2;
 
-        public B(Counter c1, Counter c2) {
+        B(Counter c1, Counter c2) {
             this.c1 = c1;
             this.c2 = c2;
         }
@@ -67,27 +71,17 @@ public class Demo5 {
 
         private long c = 0;
 
-        public void increment() {
-//            try {
-//                Thread.sleep(10);
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
+        void increment() {
             c++;
         }
 
-        public void decrement() {
-//            try {
-//                Thread.sleep(10);
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
+        void decrement() {
             c--;
         }
 
-        public long value() {
+        long value() {
             return c;
         }
-
     }
 }
+

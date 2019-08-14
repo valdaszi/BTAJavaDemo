@@ -1,5 +1,8 @@
 package lt.baltictalents.p23.demo7;
 
+/**
+ * notify - Wakes up a single (!! random !!) thread that is waiting on this object's monitor
+ */
 public class Demo7 {
 
     public static void main(String... args) throws InterruptedException {
@@ -9,16 +12,18 @@ public class Demo7 {
         System.out.println("Counter Before: " + c.value());
 
 
-        Thread t1 = new Thread(c::increment); t1.start();
+        Thread t1 = new Thread(c::increment);
+        t1.start();
 
-        Thread t2 = new Thread(c::decrement); t2.start();
+        Thread t2 = new Thread(c::decrement);
+        t2.start();
 
 
         System.out.println("Counter: " + c.value());
 
         Thread.sleep(1000);
 
-        c.run();
+        c.message();
 
         t1.join();
         t2.join();
@@ -27,42 +32,45 @@ public class Demo7 {
 
     }
 
+
     static class Counter {
 
         private long c = 0;
 
-        public synchronized void increment() {
+        synchronized void increment() {
             c++;
             try {
-                System.out.println("inc waiting start");
+                System.out.println("inc waiting - started");
                 wait();
-                System.out.println("inc waiting end");
-            } catch (InterruptedException ignored) {}
+                System.out.println("inc waiting - ended");
+            } catch (InterruptedException ignored) {
+            }
 
             System.out.println("inc notify");
             notify();
         }
 
-        public synchronized void decrement() {
+        synchronized void decrement() {
             c--;
             try {
-                System.out.println("dec waiting start");
+                System.out.println("dec waiting - started");
                 wait();
-                System.out.println("dec waiting end");
-            } catch (InterruptedException ignored) {}
+                System.out.println("dec waiting - ended");
+            } catch (InterruptedException ignored) {
+            }
 
             System.out.println("dec notify");
             notify();
         }
 
-        public synchronized long value() {
+        synchronized long value() {
             return c;
         }
 
-        public synchronized void run() {
+        synchronized void message() {
+            System.out.println("message notify");
             notify();
         }
-
     }
-
 }
+

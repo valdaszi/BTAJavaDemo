@@ -1,5 +1,8 @@
 package lt.baltictalents.p23.demo3;
 
+/**
+ * demonai - thredai kurie miršta kartu su pagrindiniu (main)
+ */
 public class Demo3 {
 
     public static void main(String... args) throws InterruptedException {
@@ -37,7 +40,7 @@ public class Demo3 {
 
         @Override
         public void run() {
-            for (int i = 0; i <= 10000000; i++) {
+            for (int i = 0; i <= 10_000_000; i++) {
 
                 Double b = Math.sqrt(Math.random());
                 if (i % 1000 == 0) {
@@ -46,7 +49,7 @@ public class Demo3 {
 
                 if (Thread.interrupted()) {
                     System.out.println("B: Nutraukta");
-                    //return;
+                    return;
                 }
             }
         }

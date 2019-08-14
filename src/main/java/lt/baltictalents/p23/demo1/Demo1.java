@@ -1,5 +1,9 @@
 package lt.baltictalents.p23.demo1;
 
+import java.math.BigInteger;
+import java.util.HashMap;
+import java.util.Map;
+
 public class Demo1 {
 
     public static void main(String... args) {
@@ -7,7 +11,8 @@ public class Demo1 {
         System.out.println(Thread.currentThread().getName());
 
         // Thread A
-        A a = new A();
+        Demo1 demo1 = new Demo1();
+        A a = demo1.new A();
         Thread t = new Thread(a, "Thread A");
         t.start();
 
@@ -18,6 +23,7 @@ public class Demo1 {
         // Thread C
         new Thread(() -> loop("C", 100)).start();
 
+        System.out.println("End");
     }
 
     static void loop(String name, int sleep) {
@@ -31,7 +37,7 @@ public class Demo1 {
         }
     }
 
-    static class A implements Runnable {
+    class A implements Runnable {
 
         @Override
         public void run() {
@@ -48,3 +54,4 @@ public class Demo1 {
 
     }
 }
+
