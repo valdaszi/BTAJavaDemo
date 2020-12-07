@@ -7,7 +7,8 @@ public class Demo1 {
         System.out.println(Thread.currentThread().getName());
 
         // Thread A
-        A a = new A();
+        Demo1 demo1 = new Demo1();
+        A a = demo1.new A();
         Thread t = new Thread(a, "Thread A");
         t.start();
 
@@ -22,7 +23,7 @@ public class Demo1 {
         System.out.println("Pabaiga");
     }
 
-    private static void loop(String name, int sleep) {
+    static void loop(String name, int sleep) {
         for (int i = 0; i < 10; i++) {
             System.out.println(Thread.currentThread().getName() + " -> " + name + ": " + i);
             try {
@@ -33,7 +34,7 @@ public class Demo1 {
         }
     }
 
-    static class A implements Runnable {
+    class A implements Runnable {
 
         @Override
         public void run() {

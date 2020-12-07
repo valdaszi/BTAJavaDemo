@@ -4,9 +4,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Kolekcijos nėra saugios dirbti iš kelių threadų
+ */
 public class Demo6 {
 
-    static final long LOOP = 100;
+    private static final long LOOP = 100;
 
     public static void main(String... args) throws InterruptedException {
 
@@ -30,7 +33,7 @@ public class Demo6 {
         t1.join();
         t2.join();
 
-        System.out.println("size=" + list.size() + ", " + list);
+        System.out.println(list.size() + " " + list);
 
     }
 }

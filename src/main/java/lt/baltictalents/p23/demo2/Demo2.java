@@ -1,5 +1,8 @@
 package lt.baltictalents.p23.demo2;
 
+/**
+ * interrupt - pažadina thredą jei jis miegojo (sleep) ir/arba kažko laukė (wait)
+ */
 public class Demo2 {
 
     static int sleepTimeA = 500;
@@ -54,6 +57,5 @@ public class Demo2 {
                 }
             }
         }
-
     }
 }
